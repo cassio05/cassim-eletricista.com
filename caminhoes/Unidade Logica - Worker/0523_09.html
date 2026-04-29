@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    
+    
+	
+	
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<script src="js/jquery-1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.corner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".box-four").corner();
+			$('<div class="tr"></div><div class="tl"></div><div class="br"></div><div class="bl"></div>').appendTo(".box-five");
+		});	
+	</script>
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	left:10px;
+	top:1869px;
+	width:1013px;
+	height:165px;
+	z-index:1;
+}
+<!--
+a:link {
+	color: #0033FF;
+	text-decoration: none
+	font-weight: bold;
+}
+a:visited {
+	color: #0033FF;
+	font-weight: bold;
+}
+a:hover {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+
+</style>
+</head>
+
+<body class="texto">
+<div id="top"></div><A name=top></A>
+<p class="cabeçalho">Unidade Lógica (LU) - Worker Euro V</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">código0523-09</p>
+<p>&nbsp;</p>
+<p class="titles">Descrição da falha</p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">Não é percebido a mensagem do número de marcha no barramento CAN.</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="titles">Causa</p>
+<p></p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">Taxa anormal de transmissão do valor do número de marcha no barramento CAN.</p>
+<p class="tabela">&nbsp;</p>
+<p class="titles">Efeito da falha</p>
+<p></p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela"></p>
+<p class="tabela">Um &rdquo;!&rdquo;(advertência) será exibido no painel de instrumentos, ao invés do número de marcha</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="titles">Circuito</p>
+<p></p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<p><img src="images/CAN.png" alt="" width="859" height="817" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="titles">Legenda</p>
+<p></p>
+<p>&nbsp;</p>
+<table width="986" border="0" class="tabela">
+  <tr>
+    <td width="73" class="texto">55303B</td>
+    <td width="903">Volkslog</td>
+  </tr>
+  <tr>
+    <td class="texto">A1124</td>
+    <td>PTM (Power Train Manager)</td>
+  </tr>
+  <tr>
+    <td class="texto">A227</td>
+    <td>Conector azul 32 vias - Painel de Instrumentos(X1)</td>
+  </tr>
+  <tr>
+    <td class="texto">A356V</td>
+    <td>Unidade Lógica (LU)</td>
+  </tr>
+  <tr>
+    <td class="texto">A402</td>
+    <td>Módulo ABS</td>
+  </tr>
+  <tr>
+    <td class="texto">A403</td>
+    <td>Módulo do retardador (opcional)</td>
+  </tr>
+  <tr>
+    <td class="texto">J843</td>
+    <td>Unidade de controle do sistema de localização  do veiculo(VTTS)</td>
+  </tr>
+  <tr>
+    <td class="texto">X200</td>
+    <td>Conector de diagnóstico (OBD)</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="titles">Avisos</p>
+<p></p>
+<p></p>
+<p>&nbsp;</p>
+<table width="981" border="0" class="tabela">
+  <tr>
+    <td width="98"><img src="images/whint_ra.png" alt="" width="80" /></td>
+    <td width="873"><p class="texto"><span class="titletexto">Nota:</span></p>
+      <p class="texto">Leia sempre as <a href="recom.html">Recomendações para Diagnósticos.</a></p>
+      <p><br />
+      </p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="tabela">O módulo EDC7 faz o cálculo de marcha baseado em sinais de  rotação do motor e rotação de saída da caixa. Após processados estes dados</p>
+<p class="tabela"> o  módulo EDC7 envia para a PTM via rede M-CAN, A PTM e quem disponibiliza  a informação na rede P-CAN, logo a unidade lógica recebe </p>
+<p class="tabela">o pacote de dados e  gera a falha caso os dados sejam inválidos.</p>
+<p class="tabela">&nbsp;</p>
+<p>&nbsp;</p>
+<p></p>
+<p></p>
+<p></p>
+<p class="titles">Passos do diagnóstico de falhas</p>
+<p></p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<table width="981" border="0" class="tabela">
+  <tr>
+    <td width="460"><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 01</b></p>
+        <p>&nbsp;</p>
+        <p>Esta falha ocorre devido a mensagem recebida via rede CAN.</p>
+        <p>Verifique e apague primeiro as falhas dos outros módulos conforme os respectivos troubleshootings.</p>
+        <p>A falha 0523-09 permanece ativa?</p>
+        <p>&nbsp;</p>
+      </div>
+    </div></td>
+    <td width="50"><img src="images/nao1.png" alt="" width="52" height="61" /></td>
+    <td width="457"><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 02</b></p>
+        <p>&nbsp;</p>
+        <p>Para a etapa 06. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div></td>
+  </tr>
+  <tr>
+    <td><img src="images/sim1.png" alt="" align="left" class="não" /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 03</b></p>
+        <p>&nbsp;</p>
+        <p>Para fins de teste, substitua o módulo de gerênciamento do motor EDC7.</p>
+        <p>Conecte todos os conectores.</p>
+        <p>Chave de ignição na posição ligada.</p>
+        <p>Apague os códigos de falha.</p>
+        <p>Teste o sistema quanto ao funcionamento normal.</p>
+        <p>A  falha 0523-09 permanece ativa?</p>
+<p>&nbsp;</p>
+      </div>
+    </div></td>
+    <td><img src="images/nao1.png" alt="" width="52" height="61" /></td>
+    <td><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 04</b></p>
+        <p>&nbsp;</p>
+        <p>Vá para a etapa 06. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div></td>
+  </tr>
+  <tr>
+    <td><img src="images/sim1.png" alt="" align="left" class="não" /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 05</b></p>
+        <p>&nbsp;</p>
+        <p>Para fins de teste, substitua a Unidade Lógica(LU).</p>
+        <p>Vá para a etapa 06.</p>
+<p>&nbsp;</p>
+      </div>
+    </div></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="images/seta.png" alt="" align="left" class="não" /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 06</b></p>
+        <p>&nbsp;</p>
+        <p>Conecte todos os conectores.</p>
+        <p>Chave de ignição na posição ligada.</p>
+        <p>Apague os códigos de falha.</p>
+        <p>Teste o sistema quanto ao funcionamento normal.</p>
+        <p>A  falha permanece ativa?</p>
+<p>&nbsp;</p>
+      </div>
+    </div></td>
+    <td><img src="images/sim.png" alt="" width="52" height="61" /></td>
+    <td><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 07</b></p>
+        <p>&nbsp;</p>
+        <p>Volte  à etapa 01 e refaça todos os testes.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div></td>
+  </tr>
+  <tr>
+    <td><img src="images/nao.png" alt="" align="left" class="não" /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><div class="box-three">
+      <div class="inside">
+        <p><b>Etapa 08</b></p>
+        <p>&nbsp;</p>
+        <p>Libere o veículo.</p>
+<p>&nbsp;</p>
+      </div>
+    </div></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="171" border="0" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <th width="32" scope="col"><a href="#top"><img src="images/xtopo.png" alt="" width="32" height="32" border="0" /></a></th>
+    <th width="139" scope="col"><a class="HMlinkred" 
+                  href="#top">Topo da 
+      P&aacute;gina</a></th>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

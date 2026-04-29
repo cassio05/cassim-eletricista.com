@@ -1,0 +1,6 @@
+1- Sensor de água no combustível.
+2- Erack-E.
+3- Linha 15.
+4- Ponto de massa localizado na coluna direita.
+5- Rele do sensor de água no combustível.
+6- PTM (Power Train Manager)

@@ -1,0 +1,7 @@
+1- Interruptor do pedal de freio.
+2- Ponto de massa localizado na coluna esquerda.
+3- Linha 15.
+4- Luz de freio.
+5- Rele da luz de freio.
+6- Linha 30
+7- PTM (Power Train Manager).

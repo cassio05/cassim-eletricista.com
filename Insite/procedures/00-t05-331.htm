@@ -1,0 +1,2110 @@
+<html><!--efc-template-->
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css" media="print">
+			div.proc-navigation {
+				display:none;
+			}
+			div.proc-graphics-sizes {
+				display:none;
+			}
+			span.toc-link {
+				display:none;
+			}
+			div#tocsec {
+				display:none;
+			}
+		</style>
+<style type="text/css" media="screen,projection,print">
+			body {
+				font-family: Helvetica, Arial;
+			}
+			button {
+				cursor: pointer;
+			}
+			.clickable {
+				cursor: pointer;
+			}
+			a:active {
+				color: #336699;
+				text-decoration: none;
+			}
+			a:link {
+				color: #336699;
+				text-decoration: none;
+			}
+			a:visited {
+				color: #336699;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #336699;
+				text-decoration: underline;
+			}
+			input {
+				border-color: #000000;
+				border-width: 1px;
+				border-style: solid;
+				cursor: pointer;
+			}
+			.box {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+			}
+			h1.manual_title {
+				text-align: center;
+			}
+			table.pubs_warning {
+				color: #FF0000;
+				border-color: #FF0000;
+				border-width: 2px;
+				border-style: solid;
+				background-color: #FFFFFF;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			table.pubs_caution {
+				color: #0000FF;
+				border-color: #0000FF;
+				border-width: 2px;
+				border-style: solid;
+				background-color: #FFFFFF;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			table.pubs_metatable {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+				width: 100%;
+				background-color: #FFFFFF;
+			}
+			table.pubs_metatable td, th {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+			}
+			table.pubs_datatable {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+				width: 100%;
+				background-color: #FFFFFF;
+				margin-top: 15px;
+			}
+			table.pubs_datatable thead td {
+				font-weight: bold;
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+				background-color: gray;
+				color: #FFFFFF;
+			}
+			table.pubs_datatable tbody td {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+			}
+			table caption {
+				background-color: #FFEE70;
+				padding-top:5px;
+				padding-left:5px;
+				padding-bottom:5px;
+				font-weight: bold;
+				text-align: left;
+				border: solid #000000 1px;
+				border-bottom-style: none;
+				color: #CCA300;
+			}
+			td.tbl_header {
+				background-color: gray;
+				font-weight: bold;
+				text-align: center;
+				color: white;
+				border-style: solid;
+				border-color: #000000;
+				border-width: 1px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+			td.tbl_footer {
+				background-color: #E8E8E8;
+				font-weight: bold;
+				text-align: center;
+				color: white;
+				border-style: solid;
+				border-color: #000000;
+				border-width: 1px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+			td.col_header {
+				background-color: #C0C0C0;
+				font-weight: bold;
+				text-align: center;
+				border-style: solid;
+				border-color: #000000;
+				border-width: 1px;
+			}
+			.yes {
+				color: #FFFFFF;
+				background-color: #006600;
+				font-weight: bold;
+				text-align: center;
+			}
+			.no {
+				color: #FFFFFF;
+				background-color: #990000;
+				font-weight: bold;
+				text-align: center;
+			}
+			.ok {
+				color: #FFFFFF;
+				background-color: #006600;
+				font-weight: bold;
+				text-align: center;
+			}
+			.nok {
+				color: #FFFFFF;
+				background-color: #990000;
+				font-weight: bold;
+				text-align: center;
+			}
+			span.highlight {
+				background-color: yellow;
+			}
+			hr {
+				color: #000000;
+				border-color: #000000;
+				border-style: solid;
+				border-width: 1px;
+			}
+			th.ts_header {
+				background-color: #808080;
+				color: #FFFFFF;
+				width: 50%;
+			}
+			div.ts_treenum {
+				font-weight: bold;
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			td.ts_node {
+				width: 50%;
+				height: 100px;
+				background-color: #C0C0C0;
+				border-color: #000000;
+				border-style: solid;
+				border-width: 1px;
+			}
+			div#pdf-div {
+				display:none;
+				border-bottom-color:black; 
+				border-bottom-style:solid; 
+				border-bottom-width:2px; 
+				padding-bottom:10px;
+			}
+		</style>:
+		<title></title>
+</head>
+<body>
+<table width="100%">
+<tr>
+<td class="tbl_header">
+<h2 align="center">Código de Falha <br></h2>
+</td>
+</tr>
+</table>
+<p>
+  <!--********* EFC Tree: using efctree.xsl ********-->
+    <div style="text-align:center; font-weight:bold;">CÓDIGO DE FALHA 331 - Circuito do Acionador do Solenóide do Injetor do Cilindro 2 - Corrente Abaixo da Normal ou Circuito Aberto</div>
+    <!--*** pdf-link using: template.xsl ***--><a name="associatedprocs"></a><h3>Associated Procedures</h3>
+<table class="pubs_datatable" cellspacing="1" cellpadding="3" border="2">
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<thead>
+<tr>
+<td colspan="4" align="center">
+<div>Procedimentos Associados</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Título do Procedimento</div>
+</td>
+<td align="center">
+<div>Número do Procedimento</div>
+</td>
+<td align="center">
+<div>Modelo do Motor</div>
+</td>
+<td align="center">
+<div>No. do Boletim</div>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-003-011-tr.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220 E</div>
+<div>ISF2.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-003-011-tr.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-003-011-tr-isbe5.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-003-011-tr-isle5.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-003-011-tr-ismx.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-003-011-tr-fiza.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-003-011-tr-ismx.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISB6.7 CM2250</div>
+</td>
+<td align="center">
+<div>4022254</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-003-011-tr-ismx.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022257</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Tampa dos Balanceiros</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-003-011-tr-ismx.htm">Consulte o Procedimento 003-011.</a> </div>
+</td>
+<td align="center">
+<div>ISX15 CM2250</div>
+</td>
+<td align="center">
+<div>4022250</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-006-026-tr.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div></div>
+<div>ISF2.8 CM2220 E</div>
+<div>ISF2.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-006-026-tr.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-006-026-tr-isbe5.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-006-026-tr-isle5.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-006-026-tr-ismx.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-006-026-tr-fiza.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-006-026.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISB6.7 CM2250</div>
+</td>
+<td align="center">
+<div>4022254</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-006-026.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022257</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br132-006-026.htm">Consulte o Procedimento 006-026.</a> </div>
+</td>
+<td align="center">
+<div>ISX15 CM2250</div>
+</td>
+<td align="center">
+<div>4022250</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div></div>
+<div>ISF2.8 CM2220 E</div>
+<div>ISF2.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-019-031-tr-fiza.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022254</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022257</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Módulo Eletrônico de Controle (ECM)</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br132-019-031.htm">Consulte o Procedimento 019-031</a>
+</div>
+</td>
+<td align="center">
+<div>ISX15 CM2250</div>
+</td>
+<td align="center">
+<div>4022250</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div></div>
+<div>ISF2.8 CM2220 E</div>
+<div>ISF2.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022254</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022257</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a> </div>
+</td>
+<td align="center">
+<div>ISX15 CM2250</div>
+</td>
+<td align="center">
+<div>4022250</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-019-043.htm">Consulte o Procedimento 019-043</a> </div>
+</td>
+<td align="center">
+<div></div>
+<div>ISF2.8 CM2220 E</div>
+<div>ISF2.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+                  <a href="../procedures/br118-019-043.htm">Consulte o Procedimento 019-043</a> </div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-019-043.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-019-043.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-019-043.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-019-043-tr-fiza.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-019-043.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISB6.7 CM2250</div>
+</td>
+<td align="center">
+<div>4022254</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-019-043.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022257</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico do Motor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br132-019-043.htm">Consulte o Procedimento 019-043</a>
+</div>
+</td>
+<td align="center">
+<div>ISX15 CM2250</div>
+</td>
+<td align="center">
+<div>4022250</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div></div>
+<div>ISF2.8 CM2220 E</div>
+<div>ISF2.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220 AN</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150 SN</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876 SN</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-019-063-tr-fiza.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISB6.7 CM2250</div>
+</td>
+<td align="center">
+<div>4022254</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISC8.3 e ISL9 CM2250</div>
+</td>
+<td align="center">
+<div>4022257</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Chicote Elétrico Interno do Atuador</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br132-019-063.htm">Consulte o Procedimento 019-063.</a>
+</div>
+</td>
+<td align="center">
+<div>ISX15 CM2250</div>
+</td>
+<td align="center">
+<div>4022250</div>
+</td>
+</tr>
+</tbody>
+
+</table><a name="troubleshooting"></a><h3>Passos de Diagnóstico de Falha</h3>
+<table rules="groups" width="100%" cellpadding="5">
+<thead>
+<tr>
+<th colspan="2" align="left" bgcolor="#CCCCCC">PASSOS</th>
+<th align="left" bgcolor="#CCCCCC">ESPECIFICAÇÕES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP1">PASSO 1. </a></td>
+<td width="40%" valign="top">Verifique os códigos de falha.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED1A">PASSO 1A</a>. </b>Leia os códigos de falha com a ferramenta eletrônica de serviço INSITE™.</td>
+<td valign="top">Código de Falha 331 ativo?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED1B">PASSO 1B</a>. </b>Leia os códigos de falha com a ferramenta eletrônica de serviço INSITE™.</td>
+<td valign="top">Existem códigos de falha ativos para outros injetores do mesmo banco?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP2">PASSO 2. </a></td>
+<td width="40%" valign="top">Verifique se há curtos-circuitos no chicote do motor.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED2A">PASSO 2A</a>. </b>Inspecione os pinos dos conectores do chicote do motor e do ECM.</td>
+<td valign="top">Pinos sujos ou danificados?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED2B">PASSO 2B</a>. </b>Verifique se há um curto-circuito com o massa no chicote do motor.</td>
+<td valign="top">Mais de 100k ohms?</td>
+</tr>
+<tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED2B_1">PASSO 2B-1</a>. </b>Verifique o solenóide do injetor quanto a um curto-circuito com o massa.</td>
+<td valign="top"></td>
+</tr>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED2C">PASSO 2C</a>. </b>Verifique se existe um curto-circuito entre pinos no chicote do motor.</td>
+<td valign="top">Mais de 100k ohms?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP3">PASSO 3. </a></td>
+<td width="40%" valign="top">Verifique o injetor e se o circuito do injetor apresenta um circuito aberto.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED3A">PASSO 3A</a>. </b>Inspecione os pinos dos conectores do chicote do motor e do ECM.</td>
+<td valign="top">Pinos sujos ou danificados? </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED3B">PASSO 3B</a>. </b>Verifique se há um circuito aberto no circuito do injetor.</td>
+<td valign="top">Menos de 2 ohms?</td>
+</tr>
+<tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED3B_1">PASSO 3B-1</a>. </b>Verifique o solenóide do injetor quanto a um circuito aberto.</td>
+<td valign="top"></td>
+</tr>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED3C">PASSO 3C</a>. </b>Verifique se há um curto-circuito no solenóide do injetor.</td>
+<td valign="top">O código de falha 'seguiu' o injetor?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED3D">PASSO 3D</a>. </b>Verifique se há códigos de falha ativos.</td>
+<td valign="top">Ainda existem códigos de falha ativos?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP4">PASSO 4. </a></td>
+<td width="40%" valign="top">Verifique a calibração do ECM e apague os códigos de falha.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED4A">PASSO 4A</a>. </b>Verifique se existe disponível uma atualização de calibração para o ECM.</td>
+<td valign="top">Se houver uma atualização de calibração disponível para este código de falha, o ECM contém essa revisão ou uma posterior?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED4B">PASSO 4B</a>. </b>Desative o código de falha.</td>
+<td valign="top">Código de falha inativo?</td>
+</tr>
+</tbody>
+</table>
+    <br><a name="STEP1"></a><hr><br><h2 align="center">Passo Assistido 1 - Verifique se há códigos de falha ativos.</h2>
+        
+        
+        <br><br><a name="GUIDED1A"></a><hr><br><h3>Passo Assistido 1A - Leia os códigos de falha com a ferramenta eletrônica de serviço INSITE™.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Ligue o motor e observe os códigos de falha. </p><ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para apagar os códigos de falha.</li>
+<li>Dê partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto. </li>
+<li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de falha.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Código de Falha 331 ativo?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Código de Falha 331 ativo?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED1B"> Ir para 1B</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b>&nbsp;<a href="../procedures/br99-019-362.htm">Consulte o Procedimento 019-362 na Seção 19.</a>
+</b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        
+        <br><br><a name="GUIDED1B"></a><hr><br><h3>Passo Assistido 1B - Leia os códigos de falha com a ferramenta eletrônica de serviço INSITE™.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Leia os códigos de falha. </p><ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de falha.</li></ul><p>NOTA: Os cilindros 1, 2 e 3 (cilindros 1 e 2 para motores de 4 cilindros) estão no mesmo banco de injetores. Os cilindros 4, 5 e 6 (cilindros 3 e 4 para motores de 4 cilindros) estão no mesmo banco de injetores.</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Existem códigos de falha ativos para outros injetores do mesmo banco?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Existem códigos de falha ativos para outros injetores do mesmo banco?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED2A"> Ir para 2A</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED3A"> Ir para 3A</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+      <br><a name="STEP2"></a><hr><br><h2 align="center">Passo Assistido 2 - Verifique se há curtos-circuitos no chicote do motor.</h2>
+        
+        
+        <br><br><a name="GUIDED2A"></a><hr><br><h3>Passo Assistido 2A - Inspecione os pinos dos conectores do chicote do motor e do ECM.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte do ECM o chicote do motor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique os pinos dos conectores do chicote do motor e do ECM quanto a:  </p><ul><li>Conector solto</li>
+<li>Pinos corroídos</li>
+<li>Pinos tortos ou quebrados</li>
+<li>Pinos torcidos para trás ou expandidos</li>
+<li>Umidade dentro ou sobre o conector</li>
+<li>Vedações do conector danificadas ou faltando</li>
+<li>Sujeira ou resíduos nos pinos do conector</li>
+<li>Capa do conector quebrada</li>
+<li>Dano na blindagem do fio</li>
+<li>Dano na guia de trava do conector.</li></ul><p>Use o seguinte procedimento de técnicas gerais de inspeção. <a href="../procedures/br99-019-361.htm">Consulte o Procedimento 019-361 na Seção 19.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Pinos sujos ou danificados?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Pinos sujos ou danificados?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Foi detectada uma conexão defeituosa no chicote do motor ou no conector do ECM.</p>
+<ul><li>Limpe o conector e os pinos.</li>
+<li>Se danificados, repare o chicote, os conectores e os pinos, se possível.</li>
+<li>
+<a href="#associatedprocs">Consulte o Procedimento 019-043 na Tabela de Procedimentos Associados.</a>
+</li></ul>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED4A"> Ir para 4A</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED2B"> Ir para 2B</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        <br><br><a name="GUIDED2B"></a><hr><br><h3>Passo Assistido 2B - Verifique se há um curto-circuito com o massa no chicote do motor.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte do ECM o chicote do motor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há um curto-circuito com o massa. </p><ul><li>Meça a resistência entre o pino do ACIONADOR do cilindro número 2, no conector do ECM no chicote do motor, e o massa do bloco.</li>
+<li>Meça a resistência entre o pino de RETORNO do cilindro número 2, no conector do ECM no chicote do motor, e o massa do bloco. </li></ul><p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+<p>NOTA: Repita o procedimento para todos os injetores do mesmo banco.</p>
+<p>Use o seguinte procedimento de técnicas gerais de medição da resistência. <a href="../procedures/br99-019-360.htm">Consulte o Procedimento 019-360 na Seção 19.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Mais de 100k ohms?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Mais de 100k ohms?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED2C"> Ir para 2C</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED2B_1"> Ir para 2B-1</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table><br><br><a name="GUIDED2B_1"></a><hr><br><h3>Passo Assistido 2B-1 - Verifique o solenóide do injetor quanto a um curto-circuito com o massa.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF). </li>
+<li>Remova a tampa dos balanceiros.</li>
+<li>Desconecte do solenóide do injetor o chicote do injetor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há um curto-circuito com o massa.</p><ul><li>Meça a resistência entre o pino do ACIONADOR do cilindro número 2, no solenóide do injetor, e o massa do bloco.</li>
+<li>Meça a resistência entre o pino de RETORNO do cilindro número 2, no solenóide do injetor, e o massa do bloco.</li></ul><p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+<p>NOTA: Repita o procedimento para todos os injetores do mesmo banco.</p>
+<p>Use o seguinte procedimento de técnicas gerais de medição da resistência. <a href="../procedures/br99-019-360.htm">Consulte o Procedimento 019-360 na Seção 19.</a> </p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Mais de 100k ohms?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Mais de 100k ohms?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Foi detectado um curto-circuito com o massa no circuito do injetor. Faça o diagnóstico de falhas do chicote do motor, do chicote do injetor e do conector de passagem quanto a um curto-circuito com o massa.</p>
+<p>Repare ou substitua o componente danificado.</p>
+</p>
+</td>
+<td class="box">
+<p>
+<p>Substitua o injetor.</p>
+<ul><li>Consulte o Procedimento 006-026 na Tabela de Procedimentos Associados.</li></ul>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        <br><br><a name="GUIDED2C"></a><hr><br><h3>Passo Assistido 2C - Verifique se existe um curto-circuito entre pinos no chicote do motor.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte do conector do ECM o chicote do motor.</li>
+<li>Remova a tampa das válvulas.</li>
+<li>Desconecte o chicote de injetor dos injetores sendo testados.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se existe um curto-circuito entre pinos.</p><ul><li>Meça a resistência entre o pino do ACIONADOR do cilindro número 2 e todos os outros pinos do conector.  </li>
+<li>Meça a resistência entre o pino de RETORNO do cilindro número 2 e todos os outros pinos do conector. </li></ul><p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+<p>Nota: Repita o procedimento para todos os injetores do mesmo banco.</p>
+<p>Use o seguinte procedimento de técnicas gerais de medição da resistência. <a href="../procedures/br99-019-360.htm">Consulte o Procedimento 019-360 na Seção 19.</a> </p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Mais de 100k ohms?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Mais de 100k ohms?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box">
+<p>
+<p>Foi detectado um curto-circuito entre pinos no circuito do injetor. Faça o diagnóstico de falhas do chicote do motor, do chicote do injetor e do conector de passagem quanto a um curto-circuito entre pinos.</p>
+<p>Repare ou substitua o componente danificado.</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED3A"> Ir para 3A</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED4A"> Ir para 4A</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        
+        
+        
+        
+      <br><a name="STEP3"></a><hr><br><h2 align="center">Passo Assistido 3 - Verifique o injetor e se o circuito do injetor apresenta um circuito aberto.</h2>
+        
+        
+        <br><br><a name="GUIDED3A"></a><hr><br><h3>Passo Assistido 3A - Inspecione os pinos dos conectores do chicote do motor e do ECM.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte do conector do ECM o chicote do motor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique os pinos dos conectores do chicote do motor e do ECM quanto a:</p><ul><li>Conector solto</li>
+<li>Pinos corroídos</li>
+<li>Pinos tortos ou quebrados</li>
+<li>Pinos torcidos para trás ou expandidos</li>
+<li>Umidade dentro ou sobre o conector</li>
+<li>Vedações do conector danificadas ou faltando</li>
+<li>Sujeira ou resíduos nos pinos dos conectores.</li>
+<li>Capa do conector quebrada</li>
+<li>Dano na blindagem do fio</li>
+<li>Dano na guia de trava do conector.</li></ul><p>Use o seguinte procedimento de técnicas gerais de inspeção. <a href="../procedures/br99-019-361.htm">Consulte o Procedimento 019-361 na Seção 19.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Pinos sujos ou danificados?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Pinos sujos ou danificados?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+            <p>Foi detectada uma conexão defeituosa.</p>
+            <ul><li>Limpe o conector e os pinos.</li>
+            
+            <li>
+<a href="#associatedprocs">Se danificados, repare o chicote, o conector ou os pinos, se possível. Consulte o Procedimento 019-043 na Tabela de Procedimentos Associados.</a>
+</li></ul>
+          </p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED4A"> Ir para 4A</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED3B"> Ir para 3B</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        <br><br><a name="GUIDED3B"></a><hr><br><h3>Passo Assistido 3B - Verifique se há um circuito aberto no circuito do injetor.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte do ECM o chicote do motor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há um circuito aberto.</p><ul><li>Meça a resistência entre o pino do ACIONADOR do cilindro número 2 e o pino de RETORNO do cilindro número 2.</li></ul><p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+<p>Use o seguinte procedimento de técnicas gerais de medição da resistência. <a href="../procedures/br99-019-360.htm">Consulte o Procedimento 019-360 na Seção 19.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Menos de 2 ohms?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Menos de 2 ohms?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED3C"> Ir para 3C</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED3B_1"> Ir para 3B-1</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table><br><br><a name="GUIDED3B_1"></a><hr><br><h3>Passo Assistido 3B-1 - Verifique o solenóide do injetor quanto a um circuito aberto.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF). </li>
+<li>Remova a tampa dos balanceiros.</li>
+<li>Desconecte do solenóide do injetor o chicote do injetor.<a href="#associatedprocs"></a>
+</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há um circuito aberto.</p><ul><li>Meça a resistência entre o pino do ACIONADOR do cilindro número 2 e o pino de RETORNO do cilindro número 2 no solenóide do injetor.</li></ul><p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+<p>Use o seguinte procedimento de técnicas gerais de medição da resistência. <a href="../procedures/br99-019-360.htm">Consulte o Procedimento 019-360 na Seção 19.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+              <p>Menos de 2 ohms?</p>
+            </p>
+</td>
+<td class="box" valign="top"><p>
+              <p>Menos de 2 ohms?</p>
+            </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Foi detectado um circuito aberto no circuito do injetor. Faça o diagnóstico de falhas do chicote do motor, do chicote do injetor e do conector de passagem quanto a um circuito aberto.</p>
+<p>Repare ou substitua o componente danificado. </p>
+</p>
+</td>
+<td class="box">
+<p>
+<p>Substitua o injetor.</p>
+<ul><li>Consulte o Procedimento 006-026 na Tabela de Procedimentos Associados.</li></ul>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+              <b><a href="#GUIDED4A"> Ir para 4A</a></b>
+            </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+              <b><a href="#GUIDED4A"> Ir para 4A</a></b>
+            </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        <br><br><a name="GUIDED3C"></a><hr><br><h3>Passo Assistido 3C - Verifique se há um curto-circuito no solenóide do injetor.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Remova a tampa dos balanceiros.</li>
+<li>Desconecte o chicote do motor do solenóide do injetor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há um curto-circuito. </p>
+<p>Remova o injetor e troque-o por um injetor do outro banco. </p><ul><li>Consulte o Procedimento 006-026 na Tabela de Procedimentos Associados.</li></ul><p>Ligue a chave de ignição.</p>
+<p>Dê partida no motor e deixe-o funcionar em marcha lenta.</p>
+<p>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de falha.</p>
+<p>NOTA: Os cilindros 1, 2 e 3 (cilindros 1 e 2 para motores de 4 cilindros) estão no mesmo banco de injetores. Os cilindros 4, 5 e 6 (cilindros 3 e 4 para motores de 4 cilindros) estão no mesmo banco de injetores.</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>O código de falha 'seguiu' o injetor?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>O código de falha 'seguiu' o injetor?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+            <p>Substitua o injetor.</p>
+            
+            
+            
+            <ul><li>
+<a href="#associatedprocs">Consulte o Procedimento 006-026 na Tabela de Procedimentos Associados.</a>
+</li></ul>
+          </p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED4A"> Ir para 4A</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED3D"> Ir para 3D</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+      <br><br><a name="GUIDED3D"></a><hr><br><h3>Passo Assistido 3D - Verifique se há códigos de falha ativos.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte todos os componentes.</li>
+<li>Ligue a chave de ignição (ON).</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Ligue o motor e observe os códigos de falha.</p><ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para apagar os códigos de falha.</li>
+<li>Dê partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
+<li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de falha.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Ainda existem códigos de falha ativos?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Ainda existem códigos de falha ativos?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Substitua o ECM.</p>
+<p>Ligue para obter autorização para substituir o ECM. Depois de receber a autorização, <a href="#associatedprocs">Consulte o Procedimento 019-031 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP4"></a><hr><br><h2 align="center">Passo Assistido 4 - Verifique a calibração do ECM e apague os códigos de falha.</h2>
+        
+        
+        <br><br><a name="GUIDED4A"></a><hr><br><h3>Passo Assistido 4A - Verifique se existe disponível uma atualização de calibração para o ECM.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte todos os componentes.</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Compare o código do ECM e o número de revisão no ECM com as revisões de calibração relacionadas no Histórico de Revisões de Calibração do ECM para verificar se houve mudanças associadas a este código de falha.</p><ul><li>Use a ferramenta eletrônica de serviço INSITE™ para localizar o código do ECM e o número de revisão existente no ECM. O código do ECM e o número de revisão encontram-se na seção Informações de Calibração, sob ID do Sistema e Plaqueta de Dados, na tela Recursos e Parâmetros.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Se houver uma atualização de calibração disponível para este código de falha, o ECM contém essa revisão ou uma posterior?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Se houver uma atualização de calibração disponível para este código de falha, o ECM contém essa revisão ou uma posterior?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box">
+<p>
+            <p>Se necessário, calibre o ECM.  <a href="#associatedprocs">Consulte o Procedimento 019-032 na Tabela de Procedimentos Associados.</a>
+</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b><a href="#GUIDED4B"> Ir para 4B</a></b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED4B"> Ir para 4B</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+        <br><br><a name="GUIDED4B"></a><hr><br><h3>Passo Assistido 4B - Desative o código de falha.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte todos os componentes.</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Desabilite e apague o código de falha.</p><ul><li>Funcione o motor de acordo com as "Condições para Apagar o Código de Falha" na seção de resumo deste procedimento de diagnóstico de falha.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+            <p>Código de falha inativo?</p>
+          </p>
+</td>
+<td class="box" valign="top"><p>
+            <p>Código de falha inativo?</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box">
+<p>
+            <p>Retorne aos passos de diagnóstico de falhas ou consulte o Posto Autorizado de Serviços Cummins® local depois de verificar e completar todos os passos novamente.</p>
+          </p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+            <b>Reparo completo</b>
+          </p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+            <b><a href="#GUIDED1A"> Ir para 1A</a></b>
+          </p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+      
+  
+</p>
+<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">Última Modificação:  22-JANEIRO-2010</div>
+<div style="margin-top:10px; margin-bottom:15px; padding-left:10px; font-weight:bold; text-align:left; font-size:13px;">
+<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a> © 2000-2009  Cummins Inc.  Todos os direitos reservados.</div>
+</div>
+</body>
+</html>

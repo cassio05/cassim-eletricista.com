@@ -1,0 +1,7 @@
+1- Válvula do escape do freio motor.
+2- Interruptor do freio motor.
+3- Ponto de massa localizado na coluna esquerda.
+4- Ponto de massa localizado na frontal do chassi.
+5- Erack-C.
+6- Linha 58d (sinalização noturna).
+7- PTM (Power Train Manager).

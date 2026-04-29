@@ -1,0 +1,1448 @@
+<html><!--efc-template-->
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css" media="print">
+			div.proc-navigation {
+				display:none;
+			}
+			div.proc-graphics-sizes {
+				display:none;
+			}
+			span.toc-link {
+				display:none;
+			}
+			div#tocsec {
+				display:none;
+			}
+		</style>
+<style type="text/css" media="screen,projection,print">
+			body {
+				font-family: Helvetica, Arial;
+			}
+			button {
+				cursor: pointer;
+			}
+			.clickable {
+				cursor: pointer;
+			}
+			a:active {
+				color: #336699;
+				text-decoration: none;
+			}
+			a:link {
+				color: #336699;
+				text-decoration: none;
+			}
+			a:visited {
+				color: #336699;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #336699;
+				text-decoration: underline;
+			}
+			input {
+				border-color: #000000;
+				border-width: 1px;
+				border-style: solid;
+				cursor: pointer;
+			}
+			.box {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+			}
+			h1.manual_title {
+				text-align: center;
+			}
+			table.pubs_warning {
+				color: #FF0000;
+				border-color: #FF0000;
+				border-width: 2px;
+				border-style: solid;
+				background-color: #FFFFFF;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			table.pubs_caution {
+				color: #0000FF;
+				border-color: #0000FF;
+				border-width: 2px;
+				border-style: solid;
+				background-color: #FFFFFF;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			table.pubs_metatable {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+				width: 100%;
+				background-color: #FFFFFF;
+			}
+			table.pubs_metatable td, th {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+			}
+			table.pubs_datatable {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+				width: 100%;
+				background-color: #FFFFFF;
+				margin-top: 15px;
+			}
+			table.pubs_datatable thead td {
+				font-weight: bold;
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+				background-color: gray;
+				color: #FFFFFF;
+			}
+			table.pubs_datatable tbody td {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
+			}
+			table caption {
+				background-color: #FFEE70;
+				padding-top:5px;
+				padding-left:5px;
+				padding-bottom:5px;
+				font-weight: bold;
+				text-align: left;
+				border: solid #000000 1px;
+				border-bottom-style: none;
+				color: #CCA300;
+			}
+			td.tbl_header {
+				background-color: gray;
+				font-weight: bold;
+				text-align: center;
+				color: white;
+				border-style: solid;
+				border-color: #000000;
+				border-width: 1px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+			td.tbl_footer {
+				background-color: #E8E8E8;
+				font-weight: bold;
+				text-align: center;
+				color: white;
+				border-style: solid;
+				border-color: #000000;
+				border-width: 1px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+			td.col_header {
+				background-color: #C0C0C0;
+				font-weight: bold;
+				text-align: center;
+				border-style: solid;
+				border-color: #000000;
+				border-width: 1px;
+			}
+			.yes {
+				color: #FFFFFF;
+				background-color: #006600;
+				font-weight: bold;
+				text-align: center;
+			}
+			.no {
+				color: #FFFFFF;
+				background-color: #990000;
+				font-weight: bold;
+				text-align: center;
+			}
+			.ok {
+				color: #FFFFFF;
+				background-color: #006600;
+				font-weight: bold;
+				text-align: center;
+			}
+			.nok {
+				color: #FFFFFF;
+				background-color: #990000;
+				font-weight: bold;
+				text-align: center;
+			}
+			span.highlight {
+				background-color: yellow;
+			}
+			hr {
+				color: #000000;
+				border-color: #000000;
+				border-style: solid;
+				border-width: 1px;
+			}
+			th.ts_header {
+				background-color: #808080;
+				color: #FFFFFF;
+				width: 50%;
+			}
+			div.ts_treenum {
+				font-weight: bold;
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			td.ts_node {
+				width: 50%;
+				height: 100px;
+				background-color: #C0C0C0;
+				border-color: #000000;
+				border-style: solid;
+				border-width: 1px;
+			}
+			div#pdf-div {
+				display:none;
+				border-bottom-color:black; 
+				border-bottom-style:solid; 
+				border-bottom-width:2px; 
+				padding-bottom:10px;
+			}
+		</style>:
+		<title></title>
+</head>
+<body>
+<table width="100%">
+<tr>
+<td class="tbl_header">
+<h2 align="center">Código de Falha <br></h2>
+</td>
+</tr>
+</table>
+<p>
+  <!--********* EFC Tree: using efctree.xsl ********-->
+    <div style="text-align:center; font-weight:bold;">CÓDIGO DE FALHA 3236 - Temperatura na Saída do SCR do Sistema de Pós-tratamento - Dados Válidos, mas Acima da Faixa Normal de Operação - Nível Menos Severo</div>
+<!--*** pdf-link using: template.xsl ***--><a name="associatedprocs"></a><h3>Associated Procedures</h3>
+<table class="pubs_datatable" cellspacing="1" cellpadding="3" border="2">
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<thead>
+<tr>
+<td colspan="4">
+<div>Procedimentos Associados</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Título do Procedimento</div>
+</td>
+<td align="center">
+<div>Número do Procedimento</div>
+</td>
+<td align="center">
+<div>Modelo do Motor</div>
+</td>
+<td align="center">
+<div>No. do Boletim</div>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-006-026-tr.htm">Consulte o Procedimento 006-026.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-006-026-tr.htm">Consulte o Procedimento 006-026.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-006-026-tr-isbe5.htm">Consulte o Procedimento 006-026.</a>
+</div>
+</td>
+<td align="center">
+<div>Motores ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-006-026-tr-isle5.htm">Consulte o Procedimento 006-026.</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-006-026-tr-ismx.htm">Consulte o Procedimento 006-026.</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Injetor</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-006-026-tr-fiza.htm">Consulte o Procedimento 006-026.</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Redução Catalítica Seletiva (SCR) do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-011-036.htm">Consulte o Procedimento 011-036.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Redução Catalítica Seletiva (SCR) do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-011-036.htm">Consulte o Procedimento 011-036.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Redução Catalítica Seletiva (SCR) do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-011-036.htm">Consulte o Procedimento 011-036.</a>
+</div>
+</td>
+<td align="center">
+<div>Motores ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Redução Catalítica Seletiva (SCR) do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-011-036.htm">Consulte o Procedimento 011-036.</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Redução Catalítica Seletiva (SCR) do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-011-036.htm">Consulte o Procedimento 011-036.</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Redução Catalítica Seletiva (SCR) do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-011-036.htm">Consulte o Procedimento 011-036.</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Catalisador de Oxidação de Diesel do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-011-049.htm">Consulte o Procedimento 011-049.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Diagnóstico do Sistema de Escape</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-011-056.htm">Consulte o Procedimento 011-056.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>Motores ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Código de Calibração do ECM</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br105-019-032.htm">Consulte o Procedimento 019-032.</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Sensor da Temperatura do Gás do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br119-019-449.htm">Consulte o Procedimento 019-449.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF2.8 CM2220</div>
+</td>
+<td align="center">
+<div>4022178</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Sensor da Temperatura do Gás do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br118-019-449.htm">Consulte o Procedimento 019-449.</a>
+</div>
+</td>
+<td align="center">
+<div>ISF3.8 CM2220</div>
+</td>
+<td align="center">
+<div>4021704</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Sensor da Temperatura do Gás do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br31-019-449.htm">Consulte o Procedimento 019-449.</a>
+</div>
+</td>
+<td align="center">
+<div>Motores ISB4.5, ISB6.7, ISD4.5 e ISD6.7 CM2150</div>
+</td>
+<td align="center">
+<div>4022188</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Sensor da Temperatura do Gás do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br45-019-449.htm">Consulte o Procedimento 019-449.</a>
+</div>
+</td>
+<td align="center">
+<div>ISL8.9 CM2150</div>
+</td>
+<td align="center">
+<div>4022190</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Sensor da Temperatura do Gás do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br35-019-449.htm">Consulte o Procedimento 019-449.</a>
+</div>
+</td>
+<td align="center">
+<div>ISM11 CM876</div>
+</td>
+<td align="center">
+<div>4022196</div>
+</td>
+</tr>
+<tr>
+<td align="center">
+<div>Sensor da Temperatura do Gás do Sistema de Pós-tratamento</div>
+</td>
+<td align="center">
+<div>
+<a href="../procedures/br125-019-449.htm">Consulte o Procedimento 019-449.</a>
+</div>
+</td>
+<td align="center">
+<div>ISZ13 CM2150</div>
+</td>
+<td align="center">
+<div>4022133</div>
+</td>
+</tr>
+</tbody>
+
+</table><a name="troubleshooting"></a><h3>Passos de Diagnóstico de Falha</h3>
+<table rules="groups" width="100%" cellpadding="5">
+<thead>
+<tr>
+<th colspan="2" align="left" bgcolor="#CCCCCC">PASSOS</th>
+<th align="left" bgcolor="#CCCCCC">ESPECIFICAÇÕES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP1">PASSO 1. </a></td>
+<td width="40%" valign="top">Verifique o sistema de pós-tratamento.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED1A">PASSO 1A</a>. </b>Verifique se há códigos de falha ativos.</td>
+<td valign="top">Códigos de Falha 3142, 3143, 3144, 3145, 3146, 3147, 3148 ou 3149 ativos ou contagens inativas?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED1B">PASSO 1B</a>. </b>Monitore os sensores de temperatura dos gases de escape do sistema de pós-tratamento.</td>
+<td valign="top">Algum dos sensores de temperatura dos gases de escape do sistema de pós-tratamento varia em mais de 24°C ou 43°F?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP2">PASSO 2. </a></td>
+<td width="40%" valign="top">Verifique o fluido de escape de diesel (DEF) quanto à contaminação.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED2A">PASSO 2A</a>. </b>Verifique o fluido de escape de diesel (DEF) quanto à contaminação.</td>
+<td valign="top">Fluido de escape de diesel (DEF) contaminado?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP3">PASSO 3. </a></td>
+<td width="40%" valign="top">Verifique o sistema de combustível.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED3A">PASSO 3A</a>. </b>Verifique se há falha de ignição em algum injetor.</td>
+<td valign="top">Foi detectada falha de ignição do motor?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP4">PASSO 4. </a></td>
+<td width="40%" valign="top">Verifique a saída do turbocompressor.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED4A">PASSO 4A</a>. </b>Inspecione a saída de escape do turbocompressor quanto à presença de óleo ou combustível.</td>
+<td valign="top">Foi detectada a presença de óleo ou de combustível na saída de escape do turbocompressor?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP5">PASSO 5. </a></td>
+<td width="40%" valign="top">Verifique o injetor de combustível do sistema de pós-tratamento.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED5A">PASSO 5A</a>. </b>Verifique o funcionamento do injetor de combustível do sistema de pós-tratamento (se equipado).</td>
+<td valign="top">Foi detectado vazamento pelo injetor de combustível do sistema de pós-tratamento durante o teste de Vazamento da Válvula de Corte do Sistema de Pós-tratamento?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP6">PASSO 6. </a></td>
+<td width="40%" valign="top">Inspecione o catalisador de oxidação de diesel do sistema de pós-tratamento.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED6A">PASSO 6A</a>. </b>Verifique o catalisador de oxidação de diesel quanto ao acúmulo de fuligem.</td>
+<td valign="top">Mais de 50% das células na superfície de admissão completamente bloqueadas por fuligem?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED6B">PASSO 6B</a>. </b>Inspecione o catalisador de oxidação de diesel quanto a trincas na parede das células.</td>
+<td valign="top">Alguma trinca nas paredes das células?</td>
+</tr>
+<tr>
+<td width="15%" valign="top" style="font-weight:bold;"><a href="#STEP7">PASSO 7. </a></td>
+<td width="40%" valign="top">Verifique a calibração do ECM e apague os códigos de falha.</td>
+<td width="60%" valign="top"> </td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED7A">PASSO 7A</a>. </b>Verifique se existe disponível uma atualização de calibração para o ECM.</td>
+<td valign="top">Se houver uma atualização de calibração disponível para este código de falha, o ECM contém essa revisão ou uma posterior?</td>
+</tr>
+<tr>
+<td width="10%" valign="top"> </td>
+<td valign="top"><b><a href="#GUIDED7B">PASSO 7B</a>. </b>Desative o código de falha.</td>
+<td valign="top">Código de falha inativo?</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP1"></a><hr><br><h2 align="center">Passo Assistido 1 - Verifique o sistema de pós-tratamento.</h2>
+
+
+<br><br><a name="GUIDED1A"></a><hr><br><h3>Passo Assistido 1A - Verifique se há códigos de falha ativos.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há códigos de falha ativos.</p><ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de falha.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Códigos de Falha 3142, 3143, 3144, 3145, 3146, 3147, 3148 ou 3149 ativos ou contagens inativas?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Códigos de Falha 3142, 3143, 3144, 3145, 3146, 3147, 3148 ou 3149 ativos ou contagens inativas?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b>Diagrama apropriado de diagnóstico do código de falha.</b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED1B"> Ir para 1B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><br><a name="GUIDED1B"></a><hr><br><h3>Passo Assistido 1B - Monitore os sensores de temperatura dos gases de escape do sistema de pós-tratamento.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li>
+<li>Ferramenta eletrônica de serviço INSITE™ conectada.</li>
+<li>Funcione o motor em marcha lenta por mais de 10 minutos.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Monitore os sensores de temperatura do gás de escape do sistema de pós-tratamento com uma ferramenta eletrônica de serviço enquanto o motor funciona em marcha lenta.</p><ul><li>Funcione o motor por 10 minutos para estabilizar as temperaturas dos gases de escape no sistema de pós-tratamento.</li>
+<li>Se algum código de falha for ativado, consulte o diagrama de diagnóstico do código de falha apropriado.</li>
+<li>Se não houver ativação de códigos de falha, anote os valores dos três sensores de temperatura dos gases de escape do sistema de pós-tratamento.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Algum dos sensores de temperatura dos gases de escape do sistema de pós-tratamento varia em mais de 24°C ou 43°F?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Algum dos sensores de temperatura dos gases de escape do sistema de pós-tratamento varia em mais de 24°C ou 43°F?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Verifique se há um curto entre o pino de sinal do sensor de temperatura em questão e todos os outros pinos do chicote.</p>
+<p>Verifique se há um curto-circuito no módulo de interface dos sensores de temperatura dos gases de escape. <a href="#associatedprocs">Consulte o Procedimento 019-464 na Tabela de Procedimentos Associados.</a>
+</p>
+<p>Se não for encontrado nenhum curto-circuito, substitua o sensor da temperatura que indica uma leitura maior ou menor que a dos outros sensores. <a href="#associatedprocs">Consulte o Procedimento 019-449 na Tabela de Procedimentos Associados. </a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED7A"> Ir para 7A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED2A"> Ir para 2A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP2"></a><hr><br><h2 align="center">Passo Assistido 2 - Verifique o fluido de escape de diesel (DEF) quanto à contaminação.</h2>
+
+
+<br><br><a name="GUIDED2A"></a><hr><br><h3>Passo Assistido 2A - Verifique o fluido de escape de diesel (DEF) quanto à contaminação.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique o fluido de escape de diesel (DEF) quanto à contaminação. </p><ul><li>
+<a href="#associatedprocs">Consulte o Procedimento 011-056 na Tabela de Procedimentos Associados. </a>
+</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Fluido de escape de diesel (DEF) contaminado?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Fluido de escape de diesel (DEF) contaminado?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Drene o tanque de fluido de escape de diesel (DEF). <a href="#associatedprocs">Consulte o Procedimento 011-056 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED7A"> Ir para 7A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED3A"> Ir para 3A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP3"></a><hr><br><h2 align="center">Passo Assistido 3 - Verifique o sistema de combustível.</h2>
+
+
+<br><br><a name="GUIDED3A"></a><hr><br><h3>Passo Assistido 3A - Verifique se há falha de ignição em algum injetor.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li>
+<li>Dê partida no motor e deixe-o funcionando em marcha lenta.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Determine se a falha de ignição de um cilindro é percebida quando o motor funciona em marcha lenta.</p><ul><li>Use o Teste de Corte de Cilindro da ferramenta eletrônica de serviço INSITE™ para verificar se há falha de ignição em algum cilindro.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Foi detectada falha de ignição do motor?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Foi detectada falha de ignição do motor?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Determine a causa da falha de ignição do motor. Use o Teste de Corte de Cilindro da ferramenta eletrônica de serviço INSITE™ para isolar o injetor com falha de ignição.</p>
+<ul><li>Substitua o injetor, se necessário. <a href="#associatedprocs">Consulte o Procedimento 006-026 na Tabela de Procedimentos Associados.</a>
+</li></ul>
+<p>Inspecione o sistema de pós-tratamento quanto a possíveis danos. <a href="#associatedprocs">Consulte o Procedimento 014-013 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED7A"> Ir para 7A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP4"></a><hr><br><h2 align="center">Passo Assistido 4 - Verifique a saída do turbocompressor.</h2>
+
+
+<br><br><a name="GUIDED4A"></a><hr><br><h3>Passo Assistido 4A - Inspecione a saída de escape do turbocompressor quanto à presença de óleo ou combustível.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Remova a tubulação de escape na saída do turbocompressor.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Procure por sinais de umidade na saída de escape do turbocompressor.</p><ul><li>Inspecione a saída de escape do turbocompressor quanto a sinais de óleo ou de combustível sendo introduzido no sistema de pós-tratamento.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Foi detectada a presença de óleo ou de combustível na saída de escape do turbocompressor?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Foi detectada a presença de óleo ou de combustível na saída de escape do turbocompressor?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Localize a causa da possível entrada de combustível ou de óleo lubrificante no sistema de pós-tratamento.</p>
+<p>Inspecione o sistema de pós-tratamento quanto a possíveis danos. <a href="#associatedprocs">Consulte o Procedimento 014-013 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED6A"> Ir para 6A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED5A"> Ir para 5A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP5"></a><hr><br><h2 align="center">Passo Assistido 5 - Verifique o injetor de combustível do sistema de pós-tratamento.</h2>
+
+
+<br><br><a name="GUIDED5A"></a><hr><br><h3>Passo Assistido 5A - Verifique o funcionamento do injetor de combustível do sistema de pós-tratamento (se equipado).</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li>
+<li>Se o motor não estiver equipado com um injetor de combustível do sistema de pós-tratamento, continue com o Passo 6A.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Verifique se há vazamento de combustível pelo injetor de combustível do sistema de pós-tratamento.</p><ul><li>Faça o Teste de Vazamento de Injetor da ferramenta eletrônica de serviço INSITE™. <a href="#associatedprocs">Consulte o Procedimento 011-054 na Tabela de Procedimentos Associados.</a> </li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Foi detectado vazamento pelo injetor de combustível do sistema de pós-tratamento durante o teste de Vazamento da Válvula de Corte do Sistema de Pós-tratamento?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Foi detectado vazamento pelo injetor de combustível do sistema de pós-tratamento durante o teste de Vazamento da Válvula de Corte do Sistema de Pós-tratamento?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Substitua o injetor de combustível do sistema de pós-tratamento. <a href="#associatedprocs">Consulte o Procedimento 014-013 na Tabela de Procedimentos Associados.</a>
+</p>
+<p>Inspecione o sistema de pós-tratamento quanto a possíveis danos. <a href="#associatedprocs">Consulte o Procedimento 011-036 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box">
+<p>
+<p>Faça um teste de acionamento rápido da aceleração para verificar se há emissão de fumaça preta pelo cano de escapamento. Funcione o motor em marcha lenta e acione o acelerador em 100%. Faça este teste várias vezes, se necessário. Verifique se há emissão visível de fumaça preta.</p>
+<ul><li>Se houver emissão de fumaça preta, inspecione o sistema de pós-tratamento quanto a possíveis danos. <a href="#associatedprocs">Consulte o Procedimento 014-013 na Tabela de Procedimentos Associados.</a>
+</li></ul>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED6A"> Ir para 6A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED6A"> Ir para 6A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP6"></a><hr><br><h2 align="center">Passo Assistido 6 - Inspecione o catalisador de oxidação de diesel do sistema de pós-tratamento.</h2>
+
+
+<br><br><a name="GUIDED6A"></a><hr><br><h3>Passo Assistido 6A - Verifique o catalisador de oxidação de diesel quanto ao acúmulo de fuligem.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Remova o catalisador de oxidação de diesel do sistema de pós-tratamento.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Inspecione o catalisador do sistema de pós-tratamento.</p><ul><li>Verifique a superfície de admissão do catalisador de oxidação de diesel do sistema de pós-tratamento quanto ao acúmulo de fuligem e/ou obstrução da superfície.</li></ul><p>
+<a href="#associatedprocs">Consulte o Procedimento 011-049 na Tabela de Procedimentos Associados.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Mais de 50% das células na superfície de admissão completamente bloqueadas por fuligem?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Mais de 50% das células na superfície de admissão completamente bloqueadas por fuligem?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Limpe o catalisador de oxidação de diesel do sistema de pós-tratamento. <a href="#associatedprocs">Consulte o Procedimento 011-049 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED6B"> Ir para 6B</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED6B"> Ir para 6B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><br><a name="GUIDED6B"></a><hr><br><h3>Passo Assistido 6B - Inspecione o catalisador de oxidação de diesel quanto a trincas na parede das células.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Catalisador de oxidação de diesel do sistema de pós-tratamento removido.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Inspecione o catalisador de oxidação de diesel do sistema de pós-tratamento.  </p><ul><li>Inspecione se há trincas nas paredes das células do catalisador de oxidação de diesel.</li></ul><p>
+<a href="#associatedprocs">Consulte o Procedimento 011-049 na Tabela de Procedimentos Associados.</a>
+</p>
+</td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Alguma trinca nas paredes das células?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Alguma trinca nas paredes das células?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box">
+<p>
+<p>Substitua o catalisador de oxidação de diesel do sistema de pós-tratamento. <a href="#associatedprocs">Consulte o Procedimento 011-049 na Tabela de Procedimentos Associados.</a>
+</p>
+</p>
+</td>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED7A"> Ir para 7A</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED7A"> Ir para 7A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP7"></a><hr><br><h2 align="center">Passo Assistido 7 - Verifique a calibração do ECM e apague os códigos de falha.</h2>
+
+
+<br><br><a name="GUIDED7A"></a><hr><br><h3>Passo Assistido 7A - Verifique se existe disponível uma atualização de calibração para o ECM.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte todos os componentes.</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Compare o código do ECM e o número de revisão no ECM em relação às revisões de calibração relacionadas no Histórico de Revisões de Calibração do ECM para verificar se houve mudanças associadas a este código de falha.</p><ul><li>Use a ferramenta eletrônica de serviço INSITE™ para localizar o código do ECM e o número de revisão existente no ECM. O código do ECM e o número de revisão encontram-se na seção Informações de Calibração, sob ID do Sistema e Plaqueta de Dados, na tela Recursos e Parâmetros.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Se houver uma atualização de calibração disponível para este código de falha, o ECM contém essa revisão ou uma posterior?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Se houver uma atualização de calibração disponível para este código de falha, o ECM contém essa revisão ou uma posterior?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box">
+<p>
+<p>Se necessário, calibre o ECM.  <a href="#associatedprocs">Consulte o Procedimento 019-032 na Tabela de Procedimentos Associados.</a> </p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b><a href="#GUIDED7B"> Ir para 7B</a></b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED7B"> Ir para 7B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><br><a name="GUIDED7B"></a><hr><br><h3>Passo Assistido 7B - Desative o código de falha.</h3>
+<table class="box" width="100%" cellpadding="2">
+<thead></thead>
+<tfoot></tfoot>
+<tbody>
+<tr valign="top">
+<td class="box" width="50%">
+<table class="box" width="100%">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte todos os componentes.</li>
+<li>Conecte a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>
+<p>Desabilite e apague o código de falha.</p><ul><li>Funcione o motor de acordo com as "Condições para Apagar o Código de Falha" na seção de resumo deste procedimento de diagnóstico de falha.</li></ul></td>
+</tr>
+</table>
+</td>
+<td align="left" width="50%"> </td>
+</tr>
+<tr>
+<td class="box" valign="top"><p>
+<p>Código de falha inativo?</p>
+</p>
+</td>
+<td class="box" valign="top"><p>
+<p>Código de falha inativo?</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box yes">SIM</td>
+<td class="box no">NÃO</td>
+</tr>
+<tr>
+<td class="box"><span style="font-weight:bold;">Sem Reparo</span></td>
+<td class="box">
+<p>
+<p>Retorne aos passos de diagnóstico de falhas ou consulte o Posto Autorizado de Serviços Cummins® local depois de verificar e completar todos os passos novamente.</p>
+</p>
+</td>
+</tr>
+<tr>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td class="box" valign="center" align="right" bgcolor="#CCCCCC">
+<font color="#990000">
+<p>
+<b><a href="#GUIDED1A"> Ir para 1A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+  
+</p>
+<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">Última Modificação:  06-JANEIRO-2010</div>
+<div style="margin-top:10px; margin-bottom:15px; padding-left:10px; font-weight:bold; text-align:left; font-size:13px;">
+<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a> © 2000-2009  Cummins Inc.  Todos os direitos reservados.</div>
+</div>
+</body>
+</html>

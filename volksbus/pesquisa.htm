@@ -1,0 +1,113 @@
+<?php
+include ('../verificaSession.inc.php');
+include_once ('../Usuario.class.php');
+include ('../conMdb.inc.php');
+$txtBusca=$_GET["txtBusca"];
+
+//funcao que retorna o nome do diagrama em funcao do numero da pagina 
+function geraNomeDiagrama($numero){
+	if($numero<10){
+		return 'de00'.$numero.'.htm';
+	}elseif($numero>99){
+		return 'de100.htm';
+	}else{
+		return 'de0'.$numero.'.htm';
+	}
+}
+
+$resultado=0;
+
+$query=odbc_exec($conexao, "SELECT * FROM Diagramas WHERE titulo LIKE '%$txtBusca%' OR componentes LIKE '%$txtBusca%'");
+$resultado=contarLinhasODBC($query);
+$query2=odbc_exec($conexao, "SELECT * FROM Conectores WHERE cod LIKE '%$txtBusca%' OR descricao LIKE '%$txtBusca%'");
+
+$resultadoTotal= $resultado + contarLinhasODBC($query2);
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Resultados da Pesquisa</title>
+<style>
+body{
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#000;
+}
+a, a:visited{
+	color:156cee;
+	cursor:pointer;
+}
+a:hover{
+	text-decoration:none;
+}
+</style>
+</head>
+
+<body onload="window.open('local-man-volksbus-DE.php','LOCAL');">
+<div style="background-color:#CCCCCC; padding: 5px 5px 5px 5px;">
+	<strong>Resultados da pesquisa:</strong>
+</div>
+<table align="left" width="100%" style="margin-left:3px; font-size:16px;">
+<?php
+if($resultadoTotal<1){
+	echo $msg='<tr style="margin: 5px 5px 5px 5px;"><td><td><br/><div align="center" style="color:#fd4e45; font-size:14px;"><strong>Nenhuma ocorrência encontrada!</strong></div></td></tr>';
+}
+else{
+
+	//Busca descricao dos Conectores
+	/*
+	$query=odbc_exec($conexao, "SELECT * FROM Conectores WHERE cod LIKE '%$txtBusca%' OR descricao LIKE '%$txtBusca%'");
+	while(odbc_fetch_row($query)){
+		$cod=odbc_result($query, "cod");
+		$descricao=odbc_result($query, "descricao");
+		echo '<tr><td><b>Conector<br/><span style="font-size:10px;">(descrição)</span></b></td><td><a href="volksbus-18.330 OT/html/de/'.strtolower($cod).'.htm">'.$cod.'</a>&nbsp;&nbsp;'.$descricao.'</td></tr>';
+		echo '<tr><td colspan="2"><hr></td></tr>';
+	}
+	*/
+	
+	//Busca Composta
+	$query=odbc_exec($conexao, "SELECT * FROM Conectores WHERE cod LIKE '%$txtBusca%' OR descricao LIKE '%$txtBusca%'");
+	while(odbc_fetch_row($query)){
+		$codConector=odbc_result($query, "cod");
+		$descConector=odbc_result($query, "descricao");
+		$queryInter=odbc_exec($conexao, "SELECT [Diagramas-Conectores].[pagDiagrama], [Diagramas-Conectores].[codConector] FROM [Diagramas-Conectores] WHERE codConector LIKE '%$codConector%'");
+		while(odbc_fetch_row($queryInter)){
+			$pagDiagrama=odbc_result($queryInter, "pagDiagrama");
+			$queryDiagrama=odbc_exec($conexao, "SELECT * FROM Diagramas WHERE pag=$pagDiagrama");
+			while(odbc_fetch_row($queryDiagrama)){
+				//retorna o nome do arquivo do diagrama em funcao do numero da pagina
+				$arquivoDiagrama=geraNomeDiagrama($pagDiagrama);
+				$titulo=odbc_result($queryDiagrama, "titulo");
+				echo '<tr><td><b>Conector </b></td><td><a href="volksbus-18.330 OT/html/de/'.strtolower($codConector).'.htm">'.$codConector.' - '.$descConector.'</a><b>&nbsp;em </b><a href="volksbus-18.330 OT/html/de/'.$arquivoDiagrama.'">'.$titulo.'</a><b>, pág. </b>'.$pagDiagrama.'</td></tr>';
+				echo '<tr><td colspan="2"><hr></td></tr>';
+			}
+		}
+	}
+	
+	//Busca dos Diagramas
+	/*
+	$query=odbc_exec($conexao, "SELECT * FROM Diagramas WHERE titulo LIKE '%$txtBusca%' OR componentes LIKE '%$txtBusca%'");
+	while(odbc_fetch_row($query)){
+		$pag=odbc_result($query, "pag");
+		$titulo=odbc_result($query, "titulo");
+		$componentes=odbc_result($query, "componentes");
+		//retorna o nome do arquivo do diagrama em funcao do numero da pagina
+		$arquivoDiagrama=geraNomeDiagrama($pag);
+		echo '<tr><td><b>Diagrama</b></td><td colspan="2"><a href="volksbus-18.330 OT/html/de/'.$arquivoDiagrama.'">'.$titulo.'</a> <b>pág.</b> '.$pag.'</td></tr>';
+		echo '<tr><td></td><td>'.$componentes.'</td></tr>';
+		echo '<tr><td colspan="2"><hr></td></tr>';
+	}
+	*/
+
+	
+//SELECT [Diagramas-Conectores].[pagDiagrama], [Diagramas-Conectores].[codConector] FROM [Diagramas-Conectores];
+
+}
+?>
+
+</table>
+</body>
+</html>

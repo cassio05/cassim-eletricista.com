@@ -1,0 +1,33 @@
+#buttonDisabled { color: white; background-color: red; position: relative; visibility: hidden; font-family: monospace; font-size: 75% }
+.110-percent {font-size: 110%}
+.120-percent {font-size: 120%}
+.144-percent {font-size: 144%}
+a.green:visited {color: green}
+a.green:link {color: green}
+a.no-underline .no-underline .no-decoration {text-decoration: none}
+.background-blue {background-color: #3333FF}
+.black {color: black}
+body {font-family: sans-serif}
+.bold {font-weight: bold}
+.border {border-style: solid; border-width: thin; text-decoration: none}
+.center {text-align: center}
+div.background-blue a:visited {color: #CCCCCC; text-decoration: none}
+div.background-blue a:link {color: #CCCCCC; text-decoration: none}
+.gray {color: #CCCCCC}
+.green {color: green}
+html {font-family: sans-serif}
+.line-through {text-decoration: line-through}
+.ok-border {border-style: solid; border-width: thin}
+.padding-2px {padding: 8px 8px 8px 8px}
+.table-indent { margin-left: 1em }
+td { font-style: arial; font-size: 10pt; padding-left: 1em; padding-right: 1em; padding-top: 1em; padding-bottom: 1em; }
+.underline {text-decoration: underline}
+.uppercase {text-transform: uppercase}
+.vertical-align-top {vertical-align: top}
+.white {color: white}
+.width-auto {width: auto}
+.width-18-percent {width: 18%}
+.width-20-percent {width: 20%}
+.width-30-percent {width: 30%}
+.width-35-percent {width: 35%}
+.width-100-percent {width: 100%}

@@ -1,0 +1,1211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    
+    
+	
+	
+	<title>Introdução B</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<script src="js/jquery-1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.corner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".box-four").corner();
+			$('<div class="tr"></div><div class="tl"></div><div class="br"></div><div class="bl"></div>').appendTo(".box-five");
+		});	
+	</script>
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	left:10px;
+	top:1869px;
+	width:1013px;
+	height:165px;
+	z-index:1;
+}
+<!--
+a:link {
+	color: #0033FF;
+	text-decoration: none
+	font-weight: bold;
+}
+a:visited {
+	color: #0033FF;
+	font-weight: bold;
+}
+a:hover {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+
+</style>
+</head>
+
+<body class="texto">
+<div id="top"></div><A name=top></A>
+<p class="cabeçalho">Unidade Lógica (LU) -  Euro V</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">Informações Gerais</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo"><img src="images/MLR-09022 Lu pronta.jpg" width="1000" /></p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="titles">Descrição do Sistema<br />
+</p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">O  painel de instrumentos dos veículos Volkswagen, além das informações  convencionais, disponibiliza códigos de falhas dos sistemas</p>
+<p class="tabela"> eletrônicos para  auxiliar no diagnóstico e solução de eventuais problemas. O sistema inclui um painel de instrumentos e  uma </p>
+<p class="tabela">Unidade Lógica e deve ser montado em um caminhão ou ônibus. O sistema é  conectado aos equipamentos eletrônicos do veículo </p>
+<p class="tabela">(TCO, ECU do motor, ABS,  caixa de mudanças...) e sua comunicação com tais equipamentos é feita através  de mensagens CAN. </p>
+<p class="tabela">A Unidade Lógica também é conectada a equipamentos  periféricos e usa o estado dos sinais de entrada para controlar o atuador, </p>
+<p class="tabela">as  luzes ou os motores conectados à saída. As falhas relacionadas com a  unidade lógica (LU) e com o módulo eletrônico do motor (ECM)</p>
+<p class="tabela"> podem ser  visualizadas no painel de instrumentos, através de números dos códigos de  falhas. O mesmo display que aparece a </p>
+<p class="tabela">quilometragem total e parcial do veículo é  utilizado para visualizar os códigos de falhas. </p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">O sistema foi desenvolvido para controlar algumas  das funções elétricas no interior do veículo.<br />
+  Essas funções podem ter diferentes modos  operacionais:<br />
+  • Modo de suspensão: Este modo é ativado quando  todas as condições favorecem a suspensão do sistema para reduzir o consumo </p>
+<p class="tabela">de  energia elétrica. Os dados de memória são armazenados em memória não volátil.</p>
+<p class="tabela"><br />
+  • Modo de inicialização: Este modo é ativado quando  pelo menos uma entrada de ativação ocorre durante o modo de suspensão. </p>
+<p class="tabela">No modo  inicialização, o sistema é inicializado. Após a inicialização, o sistema entra  em modo de operação normal.</p>
+<p class="tabela"><br />
+  • Modo normal: Este é o modo operacional quando o  sistema encontra-se ativo e a ignição está desligada.</p>
+<p class="tabela"><br />
+  • Modo de ignição: Este é o modo de operação do  sistema quando a ignição é ligada e o motor não está funcionando.</p>
+<p class="tabela"><br />
+  • Modo de funcionamento do motor: Este é o modo  operacional quando o motor está funcionando. O parâmetro RPM min permite</p>
+<p class="tabela"> escolher o limite de rotação (rpm) do motor no modo de funcionamento. O valor  padrão é 400 RPM.</p>
+<p class="tabela"><br />
+  • Modo de condução: Este é o modo operacional quando  o veículo está em movimento. O parâmetro <u>Velocidade min</u> permite</p>
+<p class="tabela">selecionar o limite de velocidade no modo de condução. O valor padrão é 6 km/h.</p>
+<p class="tabela"><br />
+  • Modo mestre: Este é um modo especial que pode ser  ativado por meio de uma solicitação de diagnóstico of/-board. </p>
+<p class="tabela">Neste modo, os  dispositivos do veículo podem ser ativados por uma solicitação de diagnóstico.  Por exemplo, o limpador</p>
+<p class="tabela"> do pára-brisa, o farol ou a luz de controle podem ser  testados individualmente. Este modo é usado também para testes na fábrica.</p>
+<p class="tabela"><br />
+  • Modo de desativação: Neste modo o estado do  sistema é salvo e, então, é alternado para o modo de suspensão.</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">• Modo de tensão baixa: Quando a tensão é menor que  o valor do parâmetro <u>V min</u> por mais de 1 minuto</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela"><strong>A Unidade Lógica  gerencia:</strong></p>
+<p class="tabela">&nbsp;</p>
+<ul>
+  <li class="tabela">Recebimento de informações da ECM do motor (rede  CAN) e transfere estas informações ao painel do veículo</li>
+  <li class="tabela"> (consumo, tempo de  viagem, manutenção, falhas diagnóstico, etc).</li>
+  <li class="tabela"> </li>
+  <li class="tabela"> Recebimento  de informações do tacógrafo para processamento do painel </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Diagnóstico  com ferramenta VCO 950, COM 08 e outras ferramentas (via rede CAN) </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Envia os  sinais dos interruptores e sensores via rede CAN para o painel de instrumentos  (cluster) </li>
+  <li class="tabela"></li>
+  <li class="tabela">Comanda velocidade do motor limpador </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Comanda  tempos de drenagem de água do sistema freios </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Gerencia  manômetro eletrônico para pressão do sistema de freios. </li>
+  <li class="tabela"></li>
+  <li class="tabela">Comanda frequência das luzes direcionais (setas) </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Diagnostica  falhas com códigos SPN e FMI (veículo e motor pelo display digital), On Board  Diagnóstic - OBD. </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Controle da  partida remota (via módulo do motor ECM + central elétrica) </li>
+  <li class="tabela"></li>
+  <li class="tabela">Atua no solenoide do bloqueio interdiferenciais  (veículos - 6x4) </li>
+  <li class="tabela"></li>
+  <li class="tabela">Gerencia o basculamento da cabine (alarme através da  buzina com portas abertas) </li>
+  <li class="tabela"></li>
+  <li class="tabela">Inibição da partida do motor com alavanca de câmbio  engatada e/ou freio de estacionamento solto </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Gerencia  iluminação interna cabine (apaga 15 segundos após fechar porta) </li>
+  <li class="tabela"></li>
+  <li class="tabela"> Gerencia  todas as luzes indicadoras do painel </li>
+  <li class="tabela"></li>
+</ul>
+<span class="tabela"> Desarma sistema de ar condicionado  em caso de superaquecimento do motor</span>
+<p class="tabela">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="titles">Siglas</p>
+<p></p>
+<p></p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<table width="981" border="0" class="tabela">
+  <tr>
+    <td width="78"><blockquote>
+      <p>ABS</p>
+    </blockquote></td>
+    <td width="893">Sistema antitravamento do freio</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>CAN</p>
+    </blockquote></td>
+    <td>Controller Area Network (Rede de area do controlador)</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>D-CAN</p>
+    </blockquote></td>
+    <td>Rede CAN de diagnostico</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>DTC</p>
+    </blockquote></td>
+    <td>Código de falha de diagnóstico</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>ECM</p>
+    </blockquote></td>
+    <td>Unidade de Controle eletrônico</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>ECU</p>
+    </blockquote></td>
+    <td>Unidade de Controle eletrônico</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>FMI</p>
+    </blockquote></td>
+    <td>Indicador de módulo de falha</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>I-CAN</p>
+    </blockquote></td>
+    <td>Rede CAN de instrumentos</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>M-CAN</p>
+    </blockquote></td>
+    <td>Rede CAN do motor</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>OBD</p>
+    </blockquote></td>
+    <td>Diagnóstico de bordo</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>P-CAN</p>
+    </blockquote></td>
+    <td>Rede CAN do trem de força</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>PTO</p>
+    </blockquote></td>
+    <td>Tomada de força</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>PWM</p>
+    </blockquote></td>
+    <td>Modulação por largura de pulso</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>SPN</p>
+    </blockquote></td>
+    <td>Número de parâmetro suspeito</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>TCO</p>
+    </blockquote></td>
+    <td>Tacógrafo</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>VSS</p>
+    </blockquote></td>
+    <td>Velocidade do veículo</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<table width="981" border="0" class="tabela">
+  <tr>
+    <td width="98"><img src="images/wwarning_ra.png" alt="" width="80" /></td>
+    <td width="873"><p> <strong>Atenção!</strong></p>
+      <p>&nbsp;</p>
+      <p>Caso os  sistemas de ar condicionado, travas e vidros elétricos sejam instalados fora da  fábrica, estes sistemas não terão o gerenciamento da LU, bem como não será  diagnosticado os códigos de falhas destes componentes.</p>
+      <p class="texto"><br />
+    </p></td>
+  </tr>
+</table>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="titles">Conectores</p>
+<p></p>
+<p></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="981" border="1" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <td width="91" valign="top"><p class="tabela"><strong>E=Entrada</strong><br />
+      <strong>S=saída</strong></p></td>
+    <td width="131" valign="top"><p class="tabela"><strong>Conector</strong></p></td>
+    <td width="45" valign="top"><p class="tabela"><strong>Pino</strong></p></td>
+    <td width="401" valign="top"><p class="tabela"><strong>Função do pino</strong></p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="131" rowspan="9" valign="top"><p> <br />
+      Conector A</p>
+      <p><img src="images/a.png" width="200" /></p></td>
+    <td width="45" valign="top"><p class="tabela">A1</p></td>
+    <td width="401" valign="top"><p class="tabela">Sinal para atuador de travamento da porta do passageiro</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="45" valign="top"><p class="tabela">A2</p></td>
+    <td width="401" valign="top"><p class="tabela">Sinal para o motor vidro elétrico lado do passageiro</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="45" valign="top"><p class="tabela">A3</p></td>
+    <td width="401" valign="top"><p class="tabela">Sinal para o motor vidro elétrico lado do passageiro</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="45" valign="top"><p class="tabela">A4</p></td>
+    <td width="401" valign="top"><p class="tabela">Sinal para atuador de travamento da porta do passageiro</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="45" valign="top"><p class="tabela">A5</p></td>
+    <td width="401" valign="top"><p class="tabela">Aterramento (KL 31)</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="45" valign="top"><p class="tabela">A6</p></td>
+    <td width="401" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="45" valign="top"><p class="tabela">A7</p></td>
+    <td width="401" valign="top"><p class="tabela">Positivo da bateria (fusível F16) KL 30</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="45" valign="top"><p class="tabela">A8</p></td>
+    <td width="401" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="45" valign="top"><p class="tabela">A9</p></td>
+    <td width="401" valign="top"><p class="tabela">Positivo da bateria (fusível F16) KL 30</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="981" border="1" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <td width="92" valign="top"><p class="tabela"><strong>E=Entrada</strong><br />
+      <strong>S=saída</strong></p></td>
+    <td width="132" valign="top"><p class="tabela"><strong>Conector</strong></p></td>
+    <td width="47" valign="top"><p class="tabela"><strong>Pino</strong></p></td>
+    <td width="406" valign="top"><p class="tabela"><strong>Função do pino</strong></p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">CAN</p></td>
+    <td width="132" rowspan="24" valign="top"><p> <br />
+      Conector B</p>
+      <p><img src="images/b.png" width="200" /></p></td>
+    <td width="47" valign="top"><p class="tabela">B1</p></td>
+    <td width="406" valign="top"><p class="tabela">I-CAN alta</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B2</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">CAN</p></td>
+    <td width="47" valign="top"><p class="tabela">B3</p></td>
+    <td width="406" valign="top"><p class="tabela">P-CAN alta</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B4</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">CAN</p></td>
+    <td width="47" valign="top"><p class="tabela">B5</p></td>
+    <td width="406" valign="top"><p class="tabela">D-CAN alta</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B6</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">CAN</p></td>
+    <td width="47" valign="top"><p class="tabela">B7</p></td>
+    <td width="406" valign="top"><p class="tabela">I-CAN baixa</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B8</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">CAN</p></td>
+    <td width="47" valign="top"><p class="tabela">B9</p></td>
+    <td width="406" valign="top"><p class="tabela">P-CAN baixa</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B10</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">CAN</p></td>
+    <td width="47" valign="top"><p class="tabela">B11</p></td>
+    <td width="406" valign="top"><p class="tabela">D-CAN baixa</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B12</p></td>
+    <td width="406" valign="top"><p class="tabela">Proteção da D-CAN</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B13</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B14</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B15</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B16</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B17</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">S</p></td>
+    <td width="47" valign="top"><p class="tabela">B18</p></td>
+    <td width="406" valign="top"><p class="tabela">Seta frontal lado esquerdo</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B19</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">S</p></td>
+    <td width="47" valign="top"><p class="tabela">B20</p></td>
+    <td width="406" valign="top"><p class="tabela">Compressor do ar-condicionado</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">S</p></td>
+    <td width="47" valign="top"><p class="tabela">B21</p></td>
+    <td width="406" valign="top"><p class="tabela">Seta do trailer lado esquerdo</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">-</p></td>
+    <td width="47" valign="top"><p class="tabela">B22</p></td>
+    <td width="406" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">S</p></td>
+    <td width="47" valign="top"><p class="tabela">B23</p></td>
+    <td width="406" valign="top"><p class="tabela">Válvula de levantamento do eixo auxiliar</p></td>
+  </tr>
+  <tr>
+    <td width="92" valign="top"><p class="tabela">S</p></td>
+    <td width="47" valign="top"><p class="tabela">B24</p></td>
+    <td width="406" valign="top"><p class="tabela">Seta do lado esquerdo</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="981" border="1" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <td width="91" valign="top"><p class="tabela"><strong>E=Entrada</strong><br />
+      <strong>S=saída</strong></p></td>
+    <td width="131" valign="top"><p class="tabela"><strong>Conector</strong></p></td>
+    <td width="46" valign="top" class="tabela"><p class="tabela"><strong>Pino</strong></p></td>
+    <td width="400" valign="top"><p class="tabela"><strong>Função do pino</strong></p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="131" rowspan="52" valign="top"><p> <br />
+      Conector C</p>
+      <p><img src="images/c.png" width="200" /></p></td>
+    <td width="46" valign="top" class="tabela">C1</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor do vidro elétrico lado do    motorista</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C2&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor do vidro elétrico lado do    passageiro</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C3&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do atuador da Trava elétrica da porta lado do    passageiro (entrada)</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C4&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do atuador da Trava elétrica da porta lado do    motorista (entrada)</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C5&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor da luz de cabine</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C6&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor da buzina</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C7&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor de travamento da cabine</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top" class="tabela">C8&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal para interface do PTO</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C9&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C10&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor da alavanca de mudanças</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C11&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C12&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor do GP</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C13&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal de Entrada do trailer (ABS)</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C14&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor do vidro elétrico lado do    motorista</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C15&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C16&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do atuador da trava elétrica da porta lado do    motorista (saída)</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C17&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do atuador da trava elétrica da porta lado do    passageiro (saída)</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C18&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor de contato da porta esquerda</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C19</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do Interruptor do pisca alerta</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C20&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do interruptor do ar-condicionado</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C21&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C22&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C23&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal para a válvula de dupla reduzida do diferencial    caixa Eaton</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C24&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C25&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do interruptor de posição do bloqueio do    diferencial</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C26&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal do interruptor de posição de neutro</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C27&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C28&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C29&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C30&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C31&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C32&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C33&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C34&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">K-line positivo</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C35&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">K-line sinal</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C36&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">K-line aterramento</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C37&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C38&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C39&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C40&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C41&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal para acionamento das Luzes do interior</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C42&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Saída de reposição</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top" class="tabela">C43&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal para Válvula antiderrapante</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top" class="tabela">C44&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Seta traseira esquerda</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C45&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Saída de reposição</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C46&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top" class="tabela">C47&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal para a válvula de dupla reduzida do diferencial    caixa Eaton</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C48&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top" class="tabela">C49&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Positivo da bateria (fusível F16) KL. 30</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top" class="tabela">C50&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Saída de reposição</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top" class="tabela">C51&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Seta traseira lado direito</p></td>
+  </tr>
+  <tr>
+    <td width="91" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top" class="tabela">C52&nbsp;</td>
+    <td width="400" valign="top"><p class="tabela">Sinal para a interface PTO</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="tabela"><strong>&nbsp;</strong></p>
+<table width="981" border="1" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <td width="89" valign="top"><p class="tabela"><strong>E=Entrada</strong><br />
+      <strong>S=saída</strong></p></td>
+    <td width="136" valign="top"><p class="tabela"><strong>Conector</strong></p></td>
+    <td width="46" valign="top"><p class="tabela"><strong>Pino</strong></p></td>
+    <td width="407" valign="top"><p class="tabela"><strong>Função do pino</strong></p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="136" rowspan="40" valign="top"><p> <br />
+      Conector D</p>
+      <p><img src="images/d.png" width="200" /></p></td>
+    <td width="46" valign="top">D1</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor de pressão do freio 1</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D2</td>
+    <td width="407" valign="top"><p class="tabela">Sinal de aterramento para os sensores de pressão de    freio</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D3</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D4</td>
+    <td width="407" valign="top"><p class="tabela">Sinal para sensor de nível do liquido de arrefecimento    (baixo)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D5</td>
+    <td width="407" valign="top"><p class="tabela">Sinal para sensor de nível do liquido de arrefecimento    (vazio)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D6</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor do filtro de ar</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D7&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal negativo para o sensor de nível de combustível</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D8&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor de pressão de combustível</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D9&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D10&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Alimentação pós-chave (15A) Fusível F3</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D11&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor de pressão do freio 2</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D12&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal de alimentação para os sensores de pressão do    sistema de freio</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D13&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Interruptor do pedal da embreagem (baixo)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D14&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor de nível do liquido de arrefecimento    (baixo)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D15&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor de nível do liquido de arrefecimento    (vazio)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D16&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D17&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal do sensor de nível de combustível</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D18&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D19&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Controle do alternador</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D20&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Monitoramento do interruptor principal de energia</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D21&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D22&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D23&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D24&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D25&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D26&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D27</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D28&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D29&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D30&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D31&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Seta lado direito do conector do trailer</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D32&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Limpador do para-brisa</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D33&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Sinal para a válvula de bloqueio do diferencial</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D34&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Marcador do indicador lado direito</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">D35&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Seta dianteira lado direito</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D36&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">D37&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Entrada de sinal da Volksnet para ativação da buzina</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D38&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D39&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">D40&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="981" border="1" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <td width="89" valign="top"><p class="tabela"><strong>E=Entrada</strong><br />
+      <strong>S=saída</strong></p></td>
+    <td width="136" valign="top"><p class="tabela"><strong>Conector</strong></p></td>
+    <td width="46" valign="top"><p class="tabela"><strong>Pino</strong></p></td>
+    <td width="407" valign="top"><p class="tabela"><strong>Função do pino</strong></p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="136" rowspan="9" valign="top"><p> <br />
+      Conector E</p>
+      <p><img src="images/e.png" width="200" /></p></td>
+    <td width="46" valign="top">E1</td>
+    <td width="407" valign="top"><p class="tabela">Válvula de bloqueio do interdiferencial</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">E2&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Atuador da trava da porta lado do motorista (Sinal)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">E3</td>
+    <td width="407" valign="top"><p class="tabela">Positivo da bateria (fusível F16)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">-</p></td>
+    <td width="46" valign="top">E4</td>
+    <td width="407" valign="top"><p class="tabela">N/C</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">E5&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Motor do vidro elétrico lado do motorista (Sinal)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">E6&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Atuador da trava da porta lado do motorista (Sinal)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">E7&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Positivo da bateria (fusível F16)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">S</p></td>
+    <td width="46" valign="top">E8&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Motor do vidro elétrico lado do motorista (Sinal)</p></td>
+  </tr>
+  <tr>
+    <td width="89" valign="top"><p class="tabela">E</p></td>
+    <td width="46" valign="top">E9&nbsp;</td>
+    <td width="407" valign="top"><p class="tabela">Aterramento coluna A lado direito</p></td>
+  </tr>
+</table>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="titles">Designação dos bornes (terminais) segundo a norma DIN 72552.</p>
+<p></p>
+<p></p>
+<p>&nbsp;</p>
+<p></p>
+<table width="981" border="0" class="tabela">
+  <tr>
+    <td width="79"><blockquote>
+      <p>15</p>
+    </blockquote></td>
+    <td width="892">Positivo chaveado após a bateria (saída da chave de ignição)</td>
+  </tr>
+  <tr>
+    <td>15a</td>
+    <td>Saída no pré-resistor para a bobina de ignição e para o motor de partida</td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <p>30</p>
+    </blockquote></td>
+    <td>Entrada do positivo da bateria (direto)</td>
+  </tr>
+  <tr>
+    <td>30a</td>
+    <td>Comutação de bateria 12/24 V entrada do positivo da bateria 2</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>Retomo da bateria negativo ou massa (direto)</td>
+  </tr>
+  <tr>
+    <td>31a</td>
+    <td>Retomo no negativo da bateria 2</td>
+  </tr>
+  <tr>
+    <td>31b</td>
+    <td>Retomo para a bateria negativo ou massa através de chave ou relé (negativo chaveado)</td>
+  </tr>
+  <tr>
+    <td>31c</td>
+    <td>Retomo no negativo da bateria I</td>
+  </tr>
+  <tr>
+    <td>49</td>
+    <td>Entrada</td>
+  </tr>
+  <tr>
+    <td>49a</td>
+    <td>Saída</td>
+  </tr>
+  <tr>
+    <td>49b</td>
+    <td>Saída segundo circuito da seta</td>
+  </tr>
+  <tr>
+    <td>49c</td>
+    <td>Saída terceiro circuito da seta</td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>Controle do motor de partida (Direto)</td>
+  </tr>
+  <tr>
+    <td>50a</td>
+    <td>Relé comutador de bateria saída para controle do motor de partida</td>
+  </tr>
+  <tr>
+    <td>50b</td>
+    <td>Controle do motor de partida para operação em paralelo de dois motores de partida com controle sequêncial</td>
+  </tr>
+  <tr>
+    <td>50c</td>
+    <td>Ralé de partida para controle sequêncial da corrente de engrenamento de dois motores de partida em paralelo</td>
+  </tr>
+  <tr>
+    <td>50d</td>
+    <td>Entrada no relê de partida para o motor de partida 2</td>
+  </tr>
+  <tr>
+    <td>50e</td>
+    <td>ReIé de bloqueio de partida (Entrada)</td>
+  </tr>
+  <tr>
+    <td><p>50f</p></td>
+    <td>ReIé de bloqueio de partida (Saída)</td>
+  </tr>
+  <tr>
+    <td>50g</td>
+    <td>Relé de repetição de partida (Entrada)</td>
+  </tr>
+  <tr>
+    <td>50h</td>
+    <td>Relé de repetição de partida (Saída)</td>
+  </tr>
+  <tr>
+    <td>53</td>
+    <td>Motor do limpador do para-brisa, entrada (+)</td>
+  </tr>
+  <tr>
+    <td>53a</td>
+    <td>Limpador do para-brisa (+), parada fina</td>
+  </tr>
+  <tr>
+    <td>53b</td>
+    <td>Limpador do para-brisa (bobina paralela)</td>
+  </tr>
+  <tr>
+    <td>53c</td>
+    <td>Bomba elétrica do lavador do para-brisa</td>
+  </tr>
+  <tr>
+    <td>53e</td>
+    <td>Limpador do para-brisa (bobina de freio)</td>
+  </tr>
+  <tr>
+    <td>53i</td>
+    <td>Motor do limpador do para-brisa com ímã permanente e terceira escova (para velocidade maior)</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>Farol de neblina</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>Farol</td>
+  </tr>
+  <tr>
+    <td>56a</td>
+    <td>Farol alto e controle do farol alto</td>
+  </tr>
+  <tr>
+    <td>56b</td>
+    <td>Farol baixo</td>
+  </tr>
+  <tr>
+    <td>56d</td>
+    <td>Contato do lampejador</td>
+  </tr>
+  <tr>
+    <td>57L</td>
+    <td>Luz de posição esquerda</td>
+  </tr>
+  <tr>
+    <td>57L</td>
+    <td>Luz de posição direita</td>
+  </tr>
+  <tr>
+    <td>58</td>
+    <td>Luzes limitadoras, lanternas, placa e instrumentos</td>
+  </tr>
+  <tr>
+    <td>58d</td>
+    <td>Iluminação  do painel de instrumentos</td>
+  </tr>
+  <tr>
+    <td>85</td>
+    <td>Saida, acionamento (final da bobina negativo ou massa do relé)</td>
+  </tr>
+  <tr>
+    <td>86</td>
+    <td>Entrada, acionamento (inicio da bobina do relé)</td>
+  </tr>
+  <tr>
+    <td>86a</td>
+    <td>Início da bobina ou 1ª bobina do relé</td>
+  </tr>
+  <tr>
+    <td>86b</td>
+    <td>Derivação na bobina ou 2ª bobina do relé</td>
+  </tr>
+  <tr>
+    <td>87</td>
+    <td>Entrada do relé</td>
+  </tr>
+  <tr>
+    <td>87a</td>
+    <td>1ª saída do relé</td>
+  </tr>
+  <tr>
+    <td>L</td>
+    <td>Setas lado esquerdo</td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>Setas lado direito</td>
+  </tr>
+</table>
+<p class="tabela">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p class="tabela">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="171" border="0" cellpadding="0" cellspacing="0" class="tabela">
+  <tr>
+    <th width="32" scope="col"><a href="#top"><img src="images/xtopo.png" alt="" width="32" height="32" border="0" /></a></th>
+    <th width="139" scope="col"><a class="HMlinkred" 
+                  href="#top">Topo da 
+      P&aacute;gina</a></th>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

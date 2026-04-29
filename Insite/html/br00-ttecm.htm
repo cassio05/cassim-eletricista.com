@@ -1,0 +1,2262 @@
+<html><!--*** template.xsi using manual-template ***--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Diagrama de Sintoma de Falha 'ECM Sem Comunicação'</title><script src="/service/generic/js/fault_code_head.js"></script></head><body onUnload="closeMsgWindowIfNeeded()" onload="recheckTranslatedGraphicsIfNeeded()">
+<font face="Arial">
+<p>
+<a href="../spt/2008/00/t3184.htm">Visualizar Tópico Relacionado</a><hr>
+<!--********* TT Tree: using tt-tree.xsl ********-->
+
+<center><h2>
+<font color="black">Diagrama de Sintoma de Falha 'ECM Sem Comunicação'</font></h2></center>
+<h4><font color="000099">Sintomas</font></h4>
+<font color="black">
+<ul>
+<ul><li>Não há comunicação e o motor <b>não</b> dará partida</li>
+<li>Não há comunicação e o motor dará partida</li>
+<li>Erros da ferramenta eletrônica de serviço INSITE™ relacionados à falta de comunicação</li>
+<li>Há comunicação com alguns ECMs mas <b>nem</b> todos os ECMs em um motor de vários módulos.</li></ul>
+</ul>
+</font>
+<h3><font color="000099">Como Utilizar Este Diagrama</font></h3>
+<p>Este procedimento de diagnóstico de falhas pode ser utilizado para diagnosticar e reparar problemas de comunicação dos datalinks J1939 e J1587 entre a ferramenta eletrônica de serviço e o ECM. Existem quatro procedimentos que podem ser utilizados para este diagrama de diagnóstico de falhas:</p>
+<ul><li>Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico.</li>
+<li>Procedimento 019-165 (Circuito do Datalink, SAE J1939) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico.</li>
+<li>Procedimento 019-166 (Circuito do Datalink, SAE J1587) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico.</li></ul>
+<p>Os passos de diagnóstico de falhas neste procedimento são criados a partir de informações obtidas nos passos anteriores. Os passos de diagnóstico de falhas <b>devem</b> ser realizados na seqüência especificada no procedimento de diagnóstico de falhas.</p>
+<p>Este procedimento de diagnóstico de falhas suporta várias famílias de motores e, portanto, algumas instruções são apresentadas de maneira geral. Aplique os procedimentos e ações solicitadas à família específica do motor com o suporte da documentação específica do motor que pode ser localizada nos manuais de diagnóstico de falhas e reparos da família específica do motor.</p>
+
+<h4>Dicas para a Oficina</h4>
+<p>Foram utilizados três princípios básicos para definir e organizar a seqüência dos passos de diagnóstico de falhas relacionados neste diagrama.</p><ul><li>Verifique o funcionamento geral do sistema antes de fazer o diagnóstico de componentes individuais do sistema. O objetivo disto é aprender com o comportamento do sistema para direcionar os próximos passos de diagnóstico de falhas.</li>
+<li>Utilize o Chicote de Topo de Bancada para separar o ECM do veículo de maneira que o ECM possa ser isolado dos problemas do veículo que possam ser a causa de falta de comunicação.</li>
+<li>Utilize um segundo veículo ou um segundo ECM para isolar os problemas de funcionamento geral do sistema antes de fazer o diagnóstico de falhas de componentes individuais do sistema.</li></ul>
+
+
+<br><a name="STEP1"></a><hr><br><center><h2>Passo Assistido 1 - Verificação do código de erro da ferramenta eletrônica de serviço INSITE™</h2>
+</center>
+
+
+<br><a name="GUIDED1A"></a><hr><br><h3>Passo Assistido 1A - Verificação do código de erro 5023 da ferramenta eletrônica de serviço INSITE™</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte a ferramenta eletrônica de serviço INSITE™.</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se a ferramenta eletrônica de serviço INSITE™ mostra o código de erro 5023.<ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de erro.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ mostra o código de erro 5023?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ mostra o código de erro 5023?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED2A"> Ir para 2A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED1B"> Ir para 1B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED1B"></a><hr><br><h3>Passo Assistido 1B - Verificação dos códigos de erro 5080 ou 5081 da ferramenta eletrônica de serviço INSITE™.</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte a ferramenta eletrônica de serviço INSITE™.</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se os códigos de erro 5080 ou 5081 do INSITE™ estão presentes.<ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de erro.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ mostra o código de erro 5080 ou 5081?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ mostra o código de erro 5080 ou 5081?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Faça a transferência de calibração do ECM</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED1C"> Ir para 1C</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED1C"></a><hr><br><h3>Passo Assistido 1C - Verificação de outros códigos de erro da ferramenta eletrônica de serviço INSITE™.</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte a ferramenta eletrônica de serviço INSITE™.</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>A ferramenta eletrônica de serviço INSITE™ mostra algum outro código de erro além dos códigos 5023, 5080 ou 5081?<ul><li>Utilize a ferramenta eletrônica de serviço INSITE™ para ler os códigos de erro.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ mostra algum outro código de erro além dos códigos 5023, 5080 ou 5081?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ mostra algum outro código de erro além dos códigos 5023, 5080 ou 5081?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Consulte as diretrizes de diagnóstico de falhas no Manual da Ferramenta Eletrônica de Serviço INSITE™.</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo Completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED1D"> Ir para 1D</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED1D"></a><hr><br><h3>Passo Assistido 1D - Verificação da senha do ECM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Conecte a ferramenta eletrônica de serviço INSITE™.</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>A ferramenta eletrônica de serviço INSITE™ indica que o ECM é protegido por senha?<ul><li>Utilize a ferramenta eletrônica de serviço INSITE™.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ indica que o ECM é protegido por senha?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A ferramenta eletrônica de serviço INSITE™ indica que o ECM é protegido por senha?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Digite a senha correta</p>
+<p>Se a senha não estiver disponível, entre em contato com o cliente para solicitá-la. Se o cliente <b>não</b> puder fornecer a senha, consulte o manual da ferramenta eletrônica de serviço INSITE™ para obter informações sobre a remoção de senhas. Serão aplicadas as diretrizes normais de garantia se for necessária a remoção da senha do ECM.</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED2A"> Ir para 2A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP2"></a><hr><br><center><h2>Passo Assistido 2 - Verificação inicial do adaptador de datalink e da ferramenta eletrônica de serviço INSITE™</h2>
+</center>
+
+
+<br><a name="GUIDED2A"></a><hr><br><h3>Passo Assistido 2A - Verificação inicial do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>adaptador do datalink conectado no conector de datalink do OEM no veículo.</li>
+<li>O computador da ferramenta eletrônica de serviço INSITE™ <b>não deve</b> estar conectado.</li>
+<li>Nota: Se estiver conectado no conector de 3 pinos do datalink do motor, as luzes de comunicação <b>não</b> piscarão; vá para o Passo 2B.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Ligue a chave de ignição (ON).<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>As luzes de comunicação no adaptador do datalink estão piscando?</p>
+<ul><li>Luz do J1708 para o INLINE</li>
+<li>J1708 ou J1939 para o INLINE II, o INLINE 4 e o INLINE 5.</li></ul>
+</p>
+</th>
+<th valign="top"><p>
+<p>As luzes de comunicação no adaptador do datalink estão piscando?</p>
+<ul><li>Luz do J1708 para o INLINE</li>
+<li>J1708 ou J1939 para o INLINE II, o INLINE 4 e o INLINE 5.</li></ul>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Nenhum Reparo</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED2C"> Ir para 2C</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED2B"> Ir para 2B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED2B"></a><hr><br><h3>Passo Assistido 2B - Verificação de reinicialização do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4>
+<p>Ferramenta eletrônica de serviço INSITE™ conectada no veículo.</p>
+</td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verificação de reinicialização do adaptador do datalink<ul><li>Desconecte a alimentação do adaptador do datalink.</li>
+<li>Deixe-a desconectada por 30 segundos</li>
+<li>Conecte novamente a alimentação no adaptador INLINE</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe a comunicação do ECM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe a comunicação do ECM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3A"> Ir para 3A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED2C"></a><hr><br><h3>Passo Assistido 2C - Verificação inicial da ferramenta eletrônica de serviço INSITE™</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ferramenta eletrônica de serviço INSITE™ conectada no veículo</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Reinicie o PC da ferramenta eletrônica de serviço INSITE™.<ul><li>Abra a ferramenta eletrônica de serviço INSITE™</li>
+<li>Verifique se há comunicação.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe a comunicação do ECM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe a comunicação do ECM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED2D"> Ir para 2D</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED2D"></a><hr><br><h3>Passo Assistido 2D - verificação de certificação do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4>
+<p>Não há</p>
+</td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se está sendo utilizado um adaptador INLINE ou INLINE I de datalink para a comunicação com o ECM.<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico para obter informações gerais sobre adaptadores de datalinks e informações de identificação de adaptadores de datalinks.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Está sendo utilizado um adaptador INLINE ou INLINE I para a comunicação com o ECM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Está sendo utilizado um adaptador INLINE ou INLINE I para a comunicação com o ECM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED8A"> Ir para 8A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED2E"> Ir para 2E</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED2E"></a><hr><br><h3>Passo Assistido 2E - verificação de firmware do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4>
+<p>Não há</p>
+</td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Certifique-se de que a versão de firmware do adaptador do datalink seja compatível com o ECM.<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico para obter informações gerais sobre adaptadores de datalinks e informações de identificação de adaptadores de datalinks.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A versão de firmware é compatível com o ECM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A versão de firmware é compatível com o ECM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top">
+<p>
+<p>Carregue a versão correta de firmware</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED8A"> Ir para 8A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED2C"> Ir para 2C</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP3"></a><hr><br><center><h2>Passo Assistido 3 - Verificações de configuração de comunicação de bancada</h2>
+</center>
+
+
+<br><a name="GUIDED3A"></a><hr><br><h3>Passo Assistido 3A - Verificação da disponibilidade da configuração de bancada</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Configuração de bancada disponível.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Certifique-se de que a configuração de bancada esteja disponível.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe alguma configuração de bancada disponível?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe alguma configuração de bancada disponível?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED3B"> Ir para 3B</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3A_1"> Ir para 3A-1</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table><br><a name="GUIDED3A_1"></a><hr><br><h3>Passo Assistido 3A-1 - Verificação da partida do motor</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se o motor dá partida.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O motor dá partida?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O motor dá partida?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED5A"> Ir para 5A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED3B"></a><hr><br><h3>Passo Assistido 3B - Verificação inicial de comunicação da configuração de bancada</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Utilize o mesmo PC da ferramenta eletrônica de serviço INSITE™ que foi utilizado para as verificações anteriores</li>
+<li>Configuração de bancada conectada com o ECM</li>
+<li>Chave de ignição do chicote de calibração de topo de bancada ligada (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Tente a comunicação com o ECM utilizando a configuração de bancada.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O ECM se comunica com a configuração de bancada?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O ECM se comunica com a configuração de bancada?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED3B_1"> Ir para 3B-1</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3C"> Ir para 3C</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table><br><a name="GUIDED3B_1"></a><hr><br><h3>Passo Assistido 3B-1 - Verificação da partida do motor</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Desconecte do ECM o cabo de calibração de topo de bancada.  Reconecte o ECM no motor original ou no conector do chicote elétrico do OEM.  Verifique se o motor dá partida.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O motor dá partida?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O motor dá partida?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED5A"> Ir para 5A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED4A"> Ir para 4A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED3C"></a><hr><br><h3>Passo Assistido 3C - Verificação da disponibilidade de um segundo veículo ou de um segundo ECM para a configuração de bancada</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Disponibilidade do segundo veículo ou do segundo ECM para os testes.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se o segundo veículo ou o segundo ECM estão disponíveis para a conexão com a configuração de bancada.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe um segundo veículo ou um segundo ECM disponíveis para a conexão com a configuração de bancada?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe um segundo veículo ou um segundo ECM disponíveis para a conexão com a configuração de bancada?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED3D"> Ir para 3D</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3E"> Ir para 3E</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED3D"></a><hr><br><h3>Passo Assistido 3D - Verificação inicial da funcionalidade da configuração de comunicação de bancada</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Utilize o mesmo PC da ferramenta eletrônica de serviço INSITE™ e as ferramentas de configuração de bancada que foram utilizados originalmente no veículo com problema.</li>
+<li>Configuração de bancada conectada com o segundo veículo ou com o segundo ECM</li>
+<li>Chave de ignição do chicote de calibração de topo de bancada ligada (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Tente a comunicação com o ECM no segundo veículo ou com um ECM de reserva utilizando a configuração de bancada.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O segundo ECM comunica-se utilizando a configuração de bancada?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O segundo ECM comunica-se utilizando a configuração de bancada?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED11A"> Ir para 11A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3E"> Ir para 3E</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED3E"></a><hr><br><h3>Passo Assistido 3E - Faça o diagnóstico de falhas do hardware da configuração de bancada</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Faça o diagnóstico de falhas do cabo da calibração de bancada, do chicote da calibração de bancada e do cabo serial.<ul><li>Execute os procedimentos de diagnóstico de falhas para avaliar o cabo da calibração de bancada, o chicote da calibração de bancada e o cabo serial. Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual de diagnóstico de falhas e reparos específico do sistema de controle eletrônico do motor, para Verificação da Resistência - Cabo Serial, Chicote da Calibração de Topo de Bancada, Cabo da Calibração de Topo de Bancada.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A verificação da configuração de bancada está OK?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A verificação da configuração de bancada está OK?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top">
+<p>
+<p>Repare ou substitua o cabo da configuração de bancada, o chicote da calibração de bancada e o cabo serial.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED3F"> Ir para 3F</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3B"> Ir para 3B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED3F"></a><hr><br><h3>Passo Assistido 3F - verificação de reposição do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Tente a comunicação com a configuração de bancada utilizando um datalink de reposição.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A configuração de bancada se comunica com o segundo ECM utilizando um adaptador de reposição do datalink?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A configuração de bancada se comunica com o segundo ECM utilizando um adaptador de reposição do datalink?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Utilize o adaptador de reposição do datalink.</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Deve ter sido identificado algum problema com a configuração de bancada. Faça novamente o diagnóstico de falhas da configuração de bancada.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED3B"> Ir para 3B</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED3E"> Ir para 3E</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP4"></a><hr><br><center><h2>Passo Assistido 4 - Verificação do circuito de alimentação do ECM</h2>
+</center>
+
+
+<br><a name="GUIDED4A"></a><hr><br><h3>Passo Assistido 4A - Verificação da configuração do motor</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se o motor está equipado com uma válvula de corte de combustível.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O motor está equipado com uma válvula de corte de combustível?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O motor está equipado com uma válvula de corte de combustível?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED4A_1"> Ir para 4A-1</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED4A_2"> Ir para 4A-2</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table><br><a name="GUIDED4A_1"></a><hr><br><h3>Passo Assistido 4A-1 - Verifique a voltagem da válvula de corte de combustível</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem entre o terminal da válvula de corte de combustível e o massa do bloco do motor.<p>Existem sistemas de 12 e de 24 volts; a voltagem da válvula de corte de combustível deve estar na faixa de 1 VCC da voltagem do sistema do veículo.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem da válvula de corte de combustível está dentro da faixa de 1 VCC da voltagem do sistema do veículo?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem da válvula de corte de combustível está dentro da faixa de 1 VCC da voltagem do sistema do veículo?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED5A"> Ir para 5A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED4B"> Ir para 4B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table><br><a name="GUIDED4A_2"></a><hr><br><h3>Passo Assistido 4A-2 - Verificação da voltagem do sinal do sensor da temperatura do líquido de arrefecimento</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li>
+<li>Desconecte o conector do sensor da temperatura do líquido de arrefecimento.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem entre os dois pinos do sensor da temperatura do líquido de arrefecimento no conector do chicote elétrico.<p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem do sinal do sensor da temperatura do líquido de arrefecimento é maior que 4,5 VCC?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem do sinal do sensor da temperatura do líquido de arrefecimento é maior que 4,5 VCC?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED5A"> Ir para 5A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED4B"> Ir para 4B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED4B"></a><hr><br><h3>Passo Assistido 4B - Verificação da voltagem da chave de ignição no ECM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte o conector do chicote elétrico que contém o sinal da chave de ignição procedente do ECM.</li>
+<li>Ligue a chave de ignição.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem entre o fio de SINAL de entrada da chave de ignição, no chicote elétrico, e o massa do bloco do motor.  <p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem da chave de ignição está dentro da faixa de 1 VCC da voltagem do sistema do veículo?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem da chave de ignição está dentro da faixa de 1 VCC da voltagem do sistema do veículo?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top">
+<p>
+<p>Repare ou substitua o chicote elétrico que contém o sinal da chave de ignição, ou repare ou substitua a chave de ignição, ou verifique a conexão da bateria. Consulte o Procedimento 019-064 (Circuito de Alimentação da Bateria pela Chave de Ignição) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos.</p>
+<p>Consulte o diagrama de diagnóstico de falha de Desempenho do Motor no manual apropriado de diagnóstico de falhas e reparos, se a condição de 'sem partida' ainda persistir.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED4C"> Ir para 4C</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED4C"></a><hr><br><h3>Passo Assistido 4C - Verifique a alimentação e o massa do ECM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Desligue a chave de ignição (OFF).</li>
+<li>Desconecte do ECM o conector do chicote elétrico que contém os fios de ALIMENTAÇÃO (-) e de ALIMENTAÇÃO (+) da bateria do ECM.</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem entre cada pino (+) de ALIMENTAÇÃO da bateria do ECM e todos os pinos (-) de ALIMENTAÇÃO da bateria do ECM no conector do chicote elétrico.<p>Consulte o diagrama de circuitos ou o diagrama elétrico para a identificação dos pinos do conector.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem de alimentação da bateria do ECM é igual à voltagem da bateria?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem de alimentação da bateria do ECM é igual à voltagem da bateria?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Ligue para obter autorização.</p>
+<p>Substitua o ECM. Consulte o Procedimento 019-031 (Módulo de Controle Eletrônico (ECM)) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos.</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Repare ou substitua o chicote elétrico que contém os fios (+) e (-) de ALIMENTAÇÃO da bateria do ECM.</p>
+<p>Consulte o diagrama de sintoma de falha de Desempenho do Motor se a condição de 'sem partida' ainda persistir.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP5"></a><hr><br><center><h2>Passo Assistido 5 - Verificação inicial da ferramenta eletrônica</h2>
+</center>
+
+
+<br><a name="GUIDED5A"></a><hr><br><h3>Passo Assistido 5A - Configuração de bancada utilizada previamente para a verificação de diagnóstico de falhas</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Nas verificações do Passo 3, a configuração de bancada foi utilizada para a comunicação bem-sucedida com o ECM?<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Nas verificações do Passo 3, a configuração de bancada foi utilizada para a comunicação bem-sucedida com o ECM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Nas verificações do Passo 3, a configuração de bancada foi utilizada para a comunicação bem-sucedida com o ECM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>O ECM estará OK e o reparo completo se <b>não</b> for necessária a comunicação pelo conector do datalink do OEM ou pelo chicote.</p>
+<p>Se for necessária a comunicação pelo conector do datalink do OEM ou pelo chicote, continue com o Passo 6A.</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED6A"> Ir para 6A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED5B"> Ir para 5B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED5B"></a><hr><br><h3>Passo Assistido 5B - Verificação da disponibilidade de um segundo veículo para a ferramenta eletrônica</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Segundo veículo disponível para os testes</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se há um segundo veículo disponível para a conexão com a ferramenta eletrônica.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe um segundo veículo disponível para a conexão com a ferramenta eletrônica?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe um segundo veículo disponível para a conexão com a ferramenta eletrônica?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED5C"> Ir para 5C</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED6A"> Ir para 6A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED5C"></a><hr><br><h3>Passo Assistido 5C - Verificação inicial da funcionalidade da ferramenta eletrônica</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ferramenta eletrônica conectada com o segundo veículo.</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Tente a comunicação com o ECM no segundo veículo utilizando o mesmo hardware da ferramenta eletrônica de serviço utilizado no veículo com problema.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O segundo ECM comunica-se utilizando a ferramenta eletrônica?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O segundo ECM comunica-se utilizando a ferramenta eletrônica?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED6A"> Ir para 6A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED9A"> Ir para 9A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP6"></a><hr><br><center><h2>Passo Assistido 6 - verificação de alimentação do adaptador do datalink</h2>
+</center>
+
+
+<br><a name="GUIDED6A"></a><hr><br><h3>Passo Assistido 6A - verificação de determinação do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se está sendo utilizado um adaptador INLINE I de datalink para a comunicação com a ferramenta eletrônica de serviço INSITE™.<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico, para obter informações gerais sobre adaptadores de datalinks.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe um adaptador INLINE I de datalink sendo utilizado para a comunicação com a ferramenta eletrônica de serviço INSITE™?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe um adaptador INLINE I de datalink sendo utilizado para a comunicação com a ferramenta eletrônica de serviço INSITE™?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED6G"> Ir para 6G</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED6B"> Ir para 6B</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED6B"></a><hr><br><h3>Passo Assistido 6B - Verifique a alimentação do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li><b>Não</b> utilize um adaptador INLINE I.</li>
+<li>Hardware da ferramenta eletrônica de serviço conectado com o veículo.</li>
+<li>Aberta a ferramenta eletrônica de serviço INSITE™</li>
+<li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Nota:  Para todos os adaptadores de datalinks, exceto o INLINE I.<p>Tente a comunicação com a ferramenta eletrônica de serviço INSITE™ e verifique se a luz de alimentação do adaptador do datalink está acesa.</p>
+<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico, para obter informações gerais sobre adaptadores de datalinks.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A luz de alimentação do adaptador do datalink está acesa?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A luz de alimentação do adaptador do datalink está acesa?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED7A"> Ir para 7A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED6C"> Ir para 6C</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED6C"></a><hr><br><h3>Passo Assistido 6C - Determinação da tentativa de comunicação pelo conector no painel do datalink do OEM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se existe a tentativa de comunicação pelo conector no painel do datalink do OEM.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe a tentativa de comunicação pelo conector no painel do datalink do OEM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe a tentativa de comunicação pelo conector no painel do datalink do OEM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED6D"> Ir para 6D</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED6E"> Ir para 6E</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED6D"></a><hr><br><h3>Passo Assistido 6D - Verificação da voltagem do conector no painel do datalink do OEM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem entre os pinos de ALIMENTAÇÃO e o massa do conector do OEM do datalink.<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico, para obter informações sobre a localização dos pinos no conector de datalink na cabine ou no conector de 6 pinos de datalink na cabine.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem é igual ou maior que 9 VCC?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem é igual ou maior que 9 VCC?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Substitua o adaptador do datalink</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED6F"> Ir para 6F</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED6E"></a><hr><br><h3>Passo Assistido 6E - Verifique a voltagem na fonte de alimentação auxiliar do adaptador do datalink</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ligue a chave de ignição (ON).</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem de alimentação do adaptador do datalink no conector do chicote do adaptador do datalink.<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico, para obter informações sobre a localização dos pinos no cabo de 3 pinos do datalink.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem é igual ou maior que 9 VCC?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem é igual ou maior que 9 VCC?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Substitua o adaptador do datalink.</p>
+</p>
+</td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED6F"> Ir para 6F</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED6F"></a><hr><br><h3>Passo Assistido 6F - Verifique a voltagem da bateria do veículo</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Meça a voltagem da bateria do veículo em todos os casos, exceto se estiver utilizando o INLINE I.<p>Se estiver utilizando o INLINE I, meça a voltagem de alimentação do adaptador do datalink fornecida pelo computador.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A voltagem é igual ou maior que 11 VCC?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A voltagem é igual ou maior que 11 VCC?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Repare ou substitua a fiação danificada.</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Limpe as conexões das baterias ou substitua as baterias.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED6G"></a><hr><br><h3>Passo Assistido 6G - Verificação da voltagem na porta serial do computador</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Nota:  Para o INLINE I somente.<p>Meça a voltagem entre o pino de terra do SINAL e o pino 'pronto' do terminal de dados, e entre o pino de terra do SINAL e o pino de solicitação de envio na porta serial do computador.</p>
+<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos do sistema de controle eletrônico, para obter informações sobre a localização dos pinos no cabo serial.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe uma voltagem mínima de 5 VCC disponível?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe uma voltagem mínima de 5 VCC disponível?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Substitua o adaptador do datalink</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Entre em contato com o Suporte de Administração de PC.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP7"></a><hr><br><center><h2>Passo Assistido 7 - verificação do circuito do datalink</h2>
+</center>
+
+
+<br><a name="GUIDED7A"></a><hr><br><h3>Passo Assistido 7A - Verifique os circuitos do datalink J1939 ou J1587</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Utilize os seguintes procedimentos para realizar as verificações dos circuitos dos datalinks J1939 ou J1587, dependendo do circuito sendo utilizado.<p>Consulte o Procedimento 019-165 (Circuito do Datalink, SAE J1939) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos.</p>
+<p>Este procedimento fornece informações para uma verificação completa da resistência; verifique se há curtos-circuitos com o massa e se há um curto-circuito entre pinos.</p>
+<p>Consulte o Procedimento 019-166 (Circuito do Datalink, SAE J1587) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos.</p>
+<p>Este procedimento fornece informações para uma verificação completa da resistência; verifique se há curtos-circuitos com o massa e entre pinos, e verifique a voltagem.</p>
+<p>Consulte o Procedimento 019-428 (Datalinks do Motor) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos. Complete a verificação de resistência, verifique se há curtos-circuitos com o massa e se há um curto-circuito entre pinos.</p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A verificação do circuito está OK?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A verificação do circuito está OK?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top">
+<p>
+<p>Repare ou substitua o chicote com o problema de datalink, seja o chicote do motor ou o chicote do OEM.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED11A"> Ir para 11A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP8"></a><hr><br><center><h2>Passo Assistido 8 - Verificação inicial da ferramenta eletrônica</h2>
+</center>
+
+
+<br><a name="GUIDED8A"></a><hr><br><h3>Passo Assistido 8A - Verificação da disponibilidade de um segundo veículo para a ferramenta eletrônica</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Segundo veículo disponível para os testes</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se há um segundo veículo disponível para a conexão com a ferramenta eletrônica.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe um segundo veículo disponível para a conexão com a ferramenta eletrônica?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe um segundo veículo disponível para a conexão com a ferramenta eletrônica?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED8B"> Ir para 8B</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED10A"> Ir para 10A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED8B"></a><hr><br><h3>Passo Assistido 8B - Verificação inicial da funcionalidade da ferramenta eletrônica</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Ferramenta eletrônica conectada com o segundo veículo</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Tentativa de comunicação com o ECM no segundo veículo através da ferramenta eletrônica.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>O segundo ECM comunica-se utilizando a ferramenta eletrônica?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>O segundo ECM comunica-se utilizando a ferramenta eletrônica?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top"><b>Sem Reparo</b></td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED11A"> Ir para 11A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b><a href="#GUIDED10A"> Ir para 10A</a></b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP9"></a><hr><br><center><h2>Passo Assistido 9 - Verificação detalhada da ferramenta eletrônica</h2>
+</center>
+
+
+<br><a name="GUIDED9A"></a><hr><br><h3>Passo Assistido 9A - Faça o diagnóstico de falhas do hardware da ferramenta eletrônica</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Execute os procedimentos de diagnóstico de falhas para avaliar o hardware da ferramenta eletrônica:<ul><li>cabo do adaptador do datalink</li>
+<li>Cabo de alimentação do adaptador do datalink</li>
+<li>adaptador do datalink</li>
+<li>Cabo serial</li>
+<li>Computador.</li></ul><p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos.</p>
+<p>Faça as seguintes verificações:</p><ul><li>Verificação Inicial - Ferramenta eletrônica de serviço INSITE™</li>
+<li>Verificação Inicial - Adaptadores de datalinks</li>
+<li>Verificação da Resistência - Cabo Serial</li>
+<li>Verificação da resistência para o cabo do adaptador do datalink e o cabo de alimentação do adaptador do datalink.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A verificação do hardware da ferramenta eletrônica está OK?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A verificação do hardware da ferramenta eletrônica está OK?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Encontrado um problema de comunicação.</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Repare ou substitua o hardware danificado.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED11A"> Ir para 11A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP10"></a><hr><br><center><h2>Passo Assistido 10 - Verificação do cabo serial e do computador</h2>
+</center>
+
+
+<br><a name="GUIDED10A"></a><hr><br><h3>Passo Assistido 10A - Faça o diagnóstico de falhas do cabo serial e do computador</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Execute os procedimentos de diagnóstico de falhas para avaliar o cabo serial e o computador.<p>Consulte o Procedimento 022-999 (Ferramentas de Serviço e Hardware - Visão Geral) na Seção F do manual apropriado de diagnóstico de falhas e reparos.</p>
+<p>Faça as seguintes verificações:</p><ul><li>Verificação Inicial - Ferramenta eletrônica de serviço INSITE™</li>
+<li>Verificação da Resistência - Cabo Serial.</li></ul></td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>As verificações do cabo serial e do computador estão OK?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>As verificações do cabo serial e do computador estão OK?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Encontrado um problema de comunicação.</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Repare ou substitua o hardware danificado.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED11A"> Ir para 11A</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="STEP11"></a><hr><br><center><h2>Passo Assistido 11 - Inicialização da memória ROM do ECM</h2>
+</center>
+
+
+<br><a name="GUIDED11A"></a><hr><br><h3>Passo Assistido 11A - Verificação da disponibilidade da ferramenta de inicialização da memória ROM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Verifique se a ferramenta de inicialização da memória ROM está disponível para o ECM específico.<p> </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>A ferramenta de inicialização da memória ROM está disponível?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>A ferramenta de inicialização da memória ROM está disponível?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top"><b>Sem Reparo</b></td>
+<td align="left" valign="top">
+<p>
+<p>Ligue para obter autorização prévia</p>
+<p>Substitua o ECM.</p>
+<p>Consulte o Procedimento 019-031 (Módulo de Controle Eletrônico (ECM)) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b><a href="#GUIDED11B"> Ir para 11B</a></b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+<br><a name="GUIDED11B"></a><hr><br><h3>Passo Assistido 11B - Inicialização da memória ROM do ECM</h3>
+<table border="1" rules="all" width="100%" cellpadding="5">
+<tr>
+<th align="left" bgcolor="CCCCCC" width="50%">
+<table border="1" width="100%" cellpadding="5">
+<tr>
+<td>
+<h4>Condições</h4><ul><li>Não há</li></ul></td>
+</tr>
+<tr>
+<td>
+<h4>Ação</h4>Inicialização da memória ROM do ECM.<p>Consulte o Procedimento 019-427 (Inicialização da Memória ROM do ECM) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos. </p>
+</td>
+</tr>
+</table>
+</th>
+<th bgcolor="CCCCCC" align="left" width="50%"> </th>
+</tr>
+<tr>
+<th valign="top"><p>
+<p>Existe a comunicação do ECM?</p>
+</p>
+</th>
+<th valign="top"><p>
+<p>Existe a comunicação do ECM?</p>
+</p>
+</th>
+</tr>
+<tbody>
+<tr><td align="center" valign="top" bgcolor="006600"><b><font color="white">SIM</font></b></td>
+<td align="center" bgcolor="990000"><b><font color="white">NÃO</font></b></td>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+<p>Calibre o ECM novamente.</p>
+</p>
+</td>
+<td align="left" valign="top">
+<p>
+<p>Ligue para obter autorização prévia</p>
+<p>Substitua o ECM.</p>
+<p>Consulte o Procedimento 019-031 (Módulo de Controle Eletrônico (ECM)) na Seção 19 do manual apropriado de diagnóstico de falhas e reparos.</p>
+</p>
+</td>
+</tr>
+<tr><td valign="center" align="right" bgcolor="CCCCCC">
+<font color="006600">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+<td valign="center" align="right" bgcolor="CCCCCC">
+<font color="990000">
+<p>
+<b>Reparo completo</b>
+</p>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</p>
+<hr>
+<h4>Última Modificação: 07-DEZEMBRO-2007</h4><br><a href="/service/english/copy.htm">Copyright</a><sup>© </sup>2007<BR>Cummins, Inc.<BR>Todos os direitos reservados
+</font>
+</body>
+</html>

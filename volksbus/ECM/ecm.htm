@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    
+	
+	
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<script src="js/jquery-1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.corner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".box-four").corner();
+			$('<div class="tr"></div><div class="tl"></div><div class="br"></div><div class="bl"></div>').appendTo(".box-five");
+		});	
+	</script>
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	left:10px;
+	top:1869px;
+	width:1013px;
+	height:165px;
+	z-index:1;
+}
+<!--
+a:link {
+	color: #0033FF;
+	text-decoration: none
+	font-weight: bold;
+}
+a:visited {
+	color: #0033FF;
+	font-weight: bold;
+}
+a:hover {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+
+</style>
+</head>
+
+<body class="texto">
+<div id="top"></div><A name=top></A>
+<p class="cabeçalho">ECM (Motor Cummins)</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">Por favor consultar o INSITE</p>
+<p class="codigo">&nbsp;</p>
+<p class="codigo">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<script>
+window.onload = function () {
+    // mensagem na tela
+    const msg = document.createElement("div");
+
+    msg.innerHTML = "Por favor, aguarde... Abrindo o INSITE";
+    msg.style.position = "fixed";
+    msg.style.top = "20px";
+    msg.style.left = "50%";
+    msg.style.transform = "translateX(-50%)";
+    msg.style.background = "#000";
+    msg.style.color = "#fff";
+    msg.style.padding = "12px 20px";
+    msg.style.borderRadius = "8px";
+    msg.style.zIndex = "9999";
+    msg.style.fontFamily = "Arial";
+
+    document.body.appendChild(msg);
+
+    // abre automaticamente depois de 6 segundos
+    setTimeout(function () {
+        window.location.href = "../../Insite/index.html";
+    }, 2000);
+};
+</script>
+
+
+</body>
+
+</html>
