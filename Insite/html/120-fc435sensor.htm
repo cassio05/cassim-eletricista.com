@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html><!--efc-template-->
 <head>
-<META http-equiv="Content-Type" content="text/html">
+<meta charset="UTF-8">
 <style type="text/css" media="print">
 			div.proc-navigation {
 				display:none;
@@ -211,38 +212,39 @@
 				padding-bottom:10px;
 			}
 		</style>:
-		<title>Pressão na Galeria de Óleo do Motor - Dados Inválidos, Intermitentes ou Incorretos</title>
+		<title>Presso na Galeria de leo do Motor - Dados Invlidos, Intermitentes ou Incorretos</title>
 </head>
 <body>
+<div id="top"></div>
 <table width="100%">
 <tr>
 <td class="tbl_header">
-<h2 align="center">Código de Falha 435 (Sensor)<br>Pressão na Galeria de Óleo do Motor - Dados Inválidos, Intermitentes ou Incorretos</h2>
+<h2 align="center">Cdigo de Falha 435 (Sensor)<br>Presso na Galeria de leo do Motor - Dados Invlidos, Intermitentes ou Incorretos</h2>
 </td>
 </tr>
 </table>
 <p>
   <!--********* EFC Tree: using efctree.xsl ********-->
-    <!--*** pdf-link using: template.xsl ***--><a name="overview"></a><h3>Visão Geral</h3>
+    <!--*** pdf-link using: template.xsl ***--><a name="overview"></a><h3>Viso Geral</h3>
       
       <p></p>
       
       <table width="100%" cellpadding="5" class="box">
 <tr>
-<td width="20%" class="col_header">CÓDIGO</td>
-<td class="col_header">RAZÃO</td>
+<td width="20%" class="col_header">CDIGO</td>
+<td class="col_header">RAZO</td>
 <td class="col_header">EFEITO</td>
 </tr>
 <tr>
-<td valign="top" class="box">Código de Falha: 435<br>PID: P100<br>SPN: 100<br>FMI: 2/2<br>LÂMPADA: Âmbar<br>SRT: <br></td>
+<td valign="top" class="box">Cdigo de Falha:435<br>PID:P100<br>SPN:100<br>FMI:2/2<br>LMPADA:mbar<br>SRT:<br></td>
 <td valign="top" class="box">
 <p>
-          <p>Pressão na Galeria de Óleo do Motor - Dados Inválidos, Intermitentes ou Incorretos. O sensor da pressão do óleo do motor lê um valor incorreto quando a chave de ignição é ligada.</p>
+          <p>Presso na Galeria de leo do Motor - Dados Invlidos, Intermitentes ou Incorretos. O sensor da presso do leo do motor l um valor incorreto quando a chave de ignio  ligada.</p>
         </p>
 </td>
 <td valign="top" class="box">
 <p>
-          <p>Nenhum quanto ao desempenho. Nenhuma proteção do motor para a pressão do óleo.</p>
+          <p>Nenhum quanto ao desempenho. Nenhuma proteo do motor para a presso do leo.</p>
         </p>
 </td>
 </tr>
@@ -257,52 +259,52 @@
 <tr>
 <td valign="top" align="center">
 <div style="border:0px;" xmlns:file="java.io.File"><img src="../rtgraphics/english/service/19/2/19202677.gif"></div>
-<div style="width:600px;">ISM11 CM876 SN - Circuito de Pressão do Óleo do Motor</div>
+<div style="width:600px;">ISM11 CM876 SN - Circuito de Presso do leo do Motor</div>
 </td>
 </tr>
 <tr>
 <td valign="top" align="center">
 <div style="border:0px;" xmlns:file="java.io.File"><img src="../rtgraphics/english/service/19/c/19c01785.gif"></div>
-<div style="width:600px;">ISZ13 CM2150 - Circuito de Pressão do Óleo do Motor</div>
+<div style="width:600px;">ISZ13 CM2150 - Circuito de Presso do leo do Motor</div>
 </td>
 </tr>
 </tbody>
 </table>
-<h4>Descrições do Circuito</h4>
-<p>O sensor da pressão do óleo do motor é utilizado pela ferramenta eletrônica de serviço (ECM) para monitorar a pressão do óleo lubrificante. Se a pressão do óleo for menor que o limite de proteção do motor, o sensor abrirá e fará registrar o Código de Falha 435.</p>
-<p>O sensor da pressão do óleo permanece fechado quando o motor <b>não</b> está funcionando, e aberto quando existe pressão do óleo.</p>
+<h4>Descries do Circuito</h4>
+<p>O sensor da presso do leo do motor  utilizado pela ferramenta eletrnica de servio (ECM) para monitorar a presso do leo lubrificante. Se a presso do leo for menor que o limite de proteo do motor, o sensor abrir e far registrar o Cdigo de Falha 435.</p>
+<p>O sensor da presso do leo permanece fechado quando o motor <b>no</b> est funcionando, e aberto quando existe presso do leo.</p>
         
         <p>
-          <h4>Condições para Execução do Diagnóstico</h4>
-            <p>Este diagnóstico é executado quando a chave de ignição é colocada na posição ON e antes de ser detectada a rotação do motor.</p>
-            <p>O diagnóstico é executado <b>somente</b> uma vez por viagem.</p>
+          <h4>Condies para Execuo do Diagnstico</h4>
+            <p>Este diagnstico  executado quando a chave de ignio  colocada na posio ON e antes de ser detectada a rotao do motor.</p>
+            <p>O diagnstico  executado <b>somente</b> uma vez por viagem.</p>
           
-          <h4>Condições para Configurar os Códigos de Falha</h4>
-            <p>Este código de falha é registrado quando é detectado um circuito aberto durante cinco ciclagens consecutivas da chave de ignição e o ECM esperava um circuito fechado quando a chave de ignição foi ligada.</p>
+          <h4>Condies para Configurar os Cdigos de Falha</h4>
+            <p>Este cdigo de falha  registrado quando  detectado um circuito aberto durante cinco ciclagens consecutivas da chave de ignio e o ECM esperava um circuito fechado quando a chave de ignio foi ligada.</p>
           
-          <h4>Ação tomada quando o código de falha está ativo</h4>
-            <ul><li>O ECM acende a luz âmbar de verificação do motor (CHECK ENGINE) imediatamente quando o diagnóstico é executado e falha.</li>
-            <li>É assumido um valor padrão para a leitura da pressão do óleo do motor.</li></ul>
+          <h4>Ao tomada quando o cdigo de falha est ativo</h4>
+            <ul><li>O ECM acende a luz mbar de verificao do motor (CHECK ENGINE) imediatamente quando o diagnstico  executado e falha.</li>
+            <li> assumido um valor padro para a leitura da presso do leo do motor.</li></ul>
           
-          <h4>Condições para Apagar o Código de Falha</h4>
-            <ul><li>Para validar o reparo, dê partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
-          <li>O ECM apaga a luz âmbar de verificação do motor (CHECK ENGINE) e o código de falha é imediatamente desativado quando o diagnóstico é executado com êxito.</li>
-<li>Este código de falha também pode ser apagado com a ferramenta eletrônica de serviço INSITE™.</li></ul>
+          <h4>Condies para Apagar o Cdigo de Falha</h4>
+            <ul><li>Para validar o reparo, d partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
+          <li>O ECM apaga a luz mbar de verificao do motor (CHECK ENGINE) e o cdigo de falha  imediatamente desativado quando o diagnstico  executado com xito.</li>
+<li>Este cdigo de falha tambm pode ser apagado com a ferramenta eletrnica de servio INSITE.</li></ul>
 
         </p>
         <h4>Dicas para a Oficina</h4>
-<p>Possíveis causas deste código de falha:</p><ul><li>Falha do sensor da pressão do óleo do motor</li>
-<li>Circuito aberto no fio de sinal do sensor da pressão do óleo do motor</li>
+<p>Possveis causas deste cdigo de falha:</p><ul><li>Falha do sensor da presso do leo do motor</li>
+<li>Circuito aberto no fio de sinal do sensor da presso do leo do motor</li>
 <li>ECM danificado</li>
-<li>Curto-circuito entre o fio de sinal do sensor da pressão do óleo do motor e uma fonte de voltagem.</li></ul>
+<li>Curto-circuito entre o fio de sinal do sensor da presso do leo do motor e uma fonte de voltagem.</li></ul>
       
-      <a name="troubleshooting"></a><a href="../procedures/120-t05-435sensor.htm">Consulte Diagnóstico do Código de Falha 435 (Sensor).</a>
+      <a name="troubleshooting"></a><a href="../procedures/120-t05-435sensor.htm">Consulte Diagnstico do Cdigo de Falha 435 (Sensor).</a>
     
   
 </p>
-<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">Última Modificação:  03-FEVEREIRO-2010</div>
+<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">ltima Modificao:03-FEVEREIRO-2010</div>
 <div style="margin-top:10px; margin-bottom:15px; padding-left:10px; font-weight:bold; text-align:left; font-size:13px;">
-<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a> © 2000-2009  Cummins Inc.  Todos os direitos reservados.</div>
+<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a>2000-2009Cummins Inc.Todos os direitos reservados.</div>
 </div>
 </body>
 </html>

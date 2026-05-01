@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html><!--efc-template-->
 <head>
-<META http-equiv="Content-Type" content="text/html">
+<meta charset="UTF-8">
 <style type="text/css" media="print">
 			div.proc-navigation {
 				display:none;
@@ -211,33 +212,34 @@
 				padding-bottom:10px;
 			}
 		</style>:
-		<title>Voltagem 1 de Alimentação de Saída de Energia da ECU - Dados Válidos mas Abaixo da Faixa Normal de Operação - Nível Moderadamente Severo</title>
+		<title>Voltagem 1 de Alimentao de Sada de Energia da ECU - Dados Vlidos mas Abaixo da Faixa Normal de Operao - Nvel Moderadamente Severo</title>
 </head>
 <body>
+<div id="top"></div>
 <table width="100%">
 <tr>
 <td class="tbl_header">
-<h2 align="center">Código de Falha 1938<br>Voltagem 1 de Alimentação de Saída de Energia da ECU - Dados Válidos mas Abaixo da Faixa Normal de Operação - Nível Moderadamente Severo</h2>
+<h2 align="center">Cdigo de Falha 1938<br>Voltagem 1 de Alimentao de Sada de Energia da ECU - Dados Vlidos mas Abaixo da Faixa Normal de Operao - Nvel Moderadamente Severo</h2>
 </td>
 </tr>
 </table>
 <p>
 <!--********* EFC Tree: using efctree.xsl ********-->
-    <!--*** pdf-link using: template.xsl ***--><a name="overview"></a><h3>Visão Geral</h3>
+    <!--*** pdf-link using: template.xsl ***--><a name="overview"></a><h3>Viso Geral</h3>
       
       <p></p>
       
       <table width="100%" cellpadding="5" class="box">
 <tr>
-<td width="20%" class="col_header">CÓDIGO</td>
-<td class="col_header">RAZÃO</td>
+<td width="20%" class="col_header">CDIGO</td>
+<td class="col_header">RAZO</td>
 <td class="col_header">EFEITO</td>
 </tr>
 <tr>
-<td valign="top" class="box">Código de Falha: 1938<br>PID: <br>SPN: 3597<br>FMI: 18<br>LÂMPADA: Âmbar<br>SRT: <br></td>
+<td valign="top" class="box">Cdigo de Falha:1938<br>PID:<br>SPN:3597<br>FMI:18<br>LMPADA:mbar<br>SRT:<br></td>
 <td valign="top" class="box">
 <p>
-          <p>Voltagem 1 de Alimentação de Saída de Energia da ECU - Dados Válidos mas Abaixo da Faixa Normal de Operação - Nível Moderadamente Severo.</p>
+          <p>Voltagem 1 de Alimentao de Sada de Energia da ECU - Dados Vlidos mas Abaixo da Faixa Normal de Operao - Nvel Moderadamente Severo.</p>
         <p>Detectada baixa voltagem da bateria pelo atuador do TGV.</p>
 </p>
 </td>
@@ -261,42 +263,42 @@
 </tr>
 </tbody>
 </table>
-<h4>Descrições do Circuito</h4>
-<p>O turbocompressor de geometria variável (TGV) é ativado eletronicamente pelo atuador. O atuador do TGV é um dispositivo 'inteligente' que recebe informações pelo datalink J1939 enviadas pelo módulo eletrônico de controle (ECM) do motor primário. O atuador do TGV realiza seus próprios diagnósticos e relata erros para o ECM do motor primário, através do datalink J1939.</p>
+<h4>Descries do Circuito</h4>
+<p>O turbocompressor de geometria varivel (TGV)  ativado eletronicamente pelo atuador. O atuador do TGV  um dispositivo 'inteligente' que recebe informaes pelo datalink J1939 enviadas pelo mdulo eletrnico de controle (ECM) do motor primrio. O atuador do TGV realiza seus prprios diagnsticos e relata erros para o ECM do motor primrio, atravs do datalink J1939.</p>
         
         
         
-      <h4>Localização do Componente</h4>
-<p>O atuador do TGV está localizado no alojamento dos rolamentos do turbocompressor.</p>
+      <h4>Localizao do Componente</h4>
+<p>O atuador do TGV est localizado no alojamento dos rolamentos do turbocompressor.</p>
 <p>
-          <h4>Condições para Execução do Diagnóstico</h4>
-            <p>Este diagnóstico é executado continuamente quando a chave de ignição encontra-se na posição ON.</p>
+          <h4>Condies para Execuo do Diagnstico</h4>
+            <p>Este diagnstico  executado continuamente quando a chave de ignio encontra-se na posio ON.</p>
           
-        <h4>Condições para Configurar os Códigos de Falha</h4>
-            <p>O código de falha é ativado quando a voltagem fornecida ao atuador do TGV cai abaixo de +10 VCC durante 10 segundos, e a rotação do motor <b>deve</b> ser zero rpm ou maior que 500 rpm.</p>
+        <h4>Condies para Configurar os Cdigos de Falha</h4>
+            <p>O cdigo de falha  ativado quando a voltagem fornecida ao atuador do TGV cai abaixo de +10 VCC durante 10 segundos, e a rotao do motor <b>deve</b> ser zero rpm ou maior que 500 rpm.</p>
           
-        <h4>Ação tomada quando o código de falha está ativo</h4>
-          <ul><li>O ECM acende imediatamente a luz âmbar de verificação do motor (CHECK ENGINE) e/ou a luz indicadora de falha (MIL) quando o diagnóstico é executado e falha. </li>
-          <li>A atuação do TGV continuará até que a voltagem da bateria caia o suficiente para que a atuação do TGV <b>não</b> possa continuar.</li></ul>
+        <h4>Ao tomada quando o cdigo de falha est ativo</h4>
+          <ul><li>O ECM acende imediatamente a luz mbar de verificao do motor (CHECK ENGINE) e/ou a luz indicadora de falha (MIL) quando o diagnstico  executado e falha. </li>
+          <li>A atuao do TGV continuar at que a voltagem da bateria caia o suficiente para que a atuao do TGV <b>no</b> possa continuar.</li></ul>
           
-        <h4>Condições para Apagar o Código de Falha</h4>
-            <ul><li>Para validar o reparo, dê partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
-<li> O ECM apagará a luz âmbar de verificação do motor (CHECK ENGINE) imediatamente depois que a voltagem para o atuador do TGV for maior que +10 VCC e a rotação do motor for zero rpm ou maior que 500 rpm.</li>
-            <li>O ECM apagará a luz indicadora de falha (MIL) depois de 3 ciclos consecutivos de ignição que o diagnóstico for executado com êxito. </li>
+        <h4>Condies para Apagar o Cdigo de Falha</h4>
+            <ul><li>Para validar o reparo, d partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
+<li> O ECM apagar a luz mbar de verificao do motor (CHECK ENGINE) imediatamente depois que a voltagem para o atuador do TGV for maior que +10 VCC e a rotao do motor for zero rpm ou maior que 500 rpm.</li>
+            <li>O ECM apagar a luz indicadora de falha (MIL) depois de 3 ciclos consecutivos de ignio que o diagnstico for executado com xito. </li>
           
-          <li>O código de falha e a luz MIL também podem ser apagados com a ferramenta eletrônica de serviço INSITE™.</li></ul>
+          <li>O cdigo de falha e a luz MIL tambm podem ser apagados com a ferramenta eletrnica de servio INSITE.</li></ul>
           
         </p>
 <h4>Dicas para a Oficina</h4>
-<p>Este código de falha é registrado quando a voltagem para o atuador do TGV cai abaixo de +10 VCC. O VGT ainda continuará a responder aos comandos do ECM do motor primário.</p>
+<p>Este cdigo de falha  registrado quando a voltagem para o atuador do TGV cai abaixo de +10 VCC. O VGT ainda continuar a responder aos comandos do ECM do motor primrio.</p>
 
-<a name="troubleshooting"></a><a href="../procedures/00-t05-1938.htm">Consulte o diagnóstico do Código de Falha 1938.</a>
+<a name="troubleshooting"></a><a href="../procedures/00-t05-1938.htm">Consulte o diagnstico do Cdigo de Falha 1938.</a>
     
   
 </p>
-<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">Última Modificação:  06-OUTUBRO-2009</div>
+<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">ltima Modificao:06-OUTUBRO-2009</div>
 <div style="margin-top:10px; margin-bottom:15px; padding-left:10px; font-weight:bold; text-align:left; font-size:13px;">
-<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a> © 2000-2009  Cummins Inc.  Todos os direitos reservados.</div>
+<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a>2000-2009Cummins Inc.Todos os direitos reservados.</div>
 </div>
 </body>
 </html>

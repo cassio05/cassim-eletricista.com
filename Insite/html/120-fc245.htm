@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html><!--efc-template-->
 <head>
-<META http-equiv="Content-Type" content="text/html">
+<meta charset="UTF-8">
 <style type="text/css" media="print">
 			div.proc-navigation {
 				display:none;
@@ -214,27 +215,28 @@
 		<title>Circuito de Controle do Ventilador - Voltagem Abaixo da Normal ou com Voltagem Baixa</title>
 </head>
 <body>
+<div id="top"></div>
 <table width="100%">
 <tr>
 <td class="tbl_header">
-<h2 align="center">Código de Falha 245<br>Circuito de Controle do Ventilador - Voltagem Abaixo da Normal ou com Voltagem Baixa</h2>
+<h2 align="center">Cdigo de Falha 245<br>Circuito de Controle do Ventilador - Voltagem Abaixo da Normal ou com Voltagem Baixa</h2>
 </td>
 </tr>
 </table>
 <p>
   <!--********* EFC Tree: using efctree.xsl ********-->
-    <!--*** pdf-link using: template.xsl ***--><a name="overview"></a><h3>Visão Geral</h3>
+    <!--*** pdf-link using: template.xsl ***--><a name="overview"></a><h3>Viso Geral</h3>
       
       <p></p>
       
       <table width="100%" cellpadding="5" class="box">
 <tr>
-<td width="20%" class="col_header">CÓDIGO</td>
-<td class="col_header">RAZÃO</td>
+<td width="20%" class="col_header">CDIGO</td>
+<td class="col_header">RAZO</td>
 <td class="col_header">EFEITO</td>
 </tr>
 <tr>
-<td valign="top" class="box">Código de Falha: 245<br>PID: S033<br>SPN: 647<br>FMI: 4/4<br>LÂMPADA: Âmbar<br>SRT: <br></td>
+<td valign="top" class="box">Cdigo de Falha:245<br>PID:S033<br>SPN:647<br>FMI:4/4<br>LMPADA:mbar<br>SRT:<br></td>
 <td valign="top" class="box">
 <p>
           <p>Circuito de Controle do Ventilador - Voltagem Abaixo da Normal ou com Voltagem Baixa. Detectada voltagem baixa no circuito de controle do ventilador durante o comando de acionamento do ventilador.</p>
@@ -242,7 +244,7 @@
 </td>
 <td valign="top" class="box">
 <p>
-          <p>O ventilador poderá permanecer ligado continuamente ou <b>não</b> funcionar.</p>
+          <p>O ventilador poder permanecer ligado continuamente ou <b>no</b> funcionar.</p>
         </p>
 </td>
 </tr>
@@ -288,40 +290,40 @@
 </tr>
 </tbody>
 </table>
-<h4>Descrições do Circuito</h4>
-<p>O circuito de controle do ventilador é um dispositivo utilizado pelo motor para controlar o funcionamento do ventilador. Quando o módulo eletrônico de controle (ECM) energiza o circuito de controle do ventilador, o ventilador é habilitado.</p>
-<p>O circuito de controle do ventilador utiliza um sinal de modulação por largura de pulso (PWM). Um sinal de modulação por largura de pulso (PWM) é um sinal de voltagem por pulso entre 0 VCC e a voltagem do sistema. A frequência do sinal de voltagem por pulso depende das necessidades da aplicação.</p>
-<p>Existem dois tipos de ventiladores suportados pelo circuito de controle: de velocidade variável e do tipo liga/desliga (ON/OFF). A ferramenta eletrônica de serviço INSITE™ pode ser utilizada para determinar qual tipo de ventilador está configurado para uso. O circuito de controle do ventilador varia de acordo com o OEM. Alguns OEMs usam um retorno do solenóide conectado no ECM ou um retorno ligado no bloco do motor ou no massa do chassi.</p>
-        <h4>Localização do Componente</h4>
-<p>A localização do solenóide de controle varia de acordo com o OEM. Consulte o manual de serviços do OEM apropriado para obter a localização.</p>
+<h4>Descries do Circuito</h4>
+<p>O circuito de controle do ventilador  um dispositivo utilizado pelo motor para controlar o funcionamento do ventilador. Quando o mdulo eletrnico de controle (ECM) energiza o circuito de controle do ventilador, o ventilador  habilitado.</p>
+<p>O circuito de controle do ventilador utiliza um sinal de modulao por largura de pulso (PWM). Um sinal de modulao por largura de pulso (PWM)  um sinal de voltagem por pulso entre 0 VCC e a voltagem do sistema. A frequncia do sinal de voltagem por pulso depende das necessidades da aplicao.</p>
+<p>Existem dois tipos de ventiladores suportados pelo circuito de controle: de velocidade varivel e do tipo liga/desliga (ON/OFF). A ferramenta eletrnica de servio INSITE pode ser utilizada para determinar qual tipo de ventilador est configurado para uso. O circuito de controle do ventilador varia de acordo com o OEM. Alguns OEMs usam um retorno do solenide conectado no ECM ou um retorno ligado no bloco do motor ou no massa do chassi.</p>
+        <h4>Localizao do Componente</h4>
+<p>A localizao do solenide de controle varia de acordo com o OEM. Consulte o manual de servios do OEM apropriado para obter a localizao.</p>
         <p>
-          <h4>Condições para Execução do Diagnóstico</h4>
-            <p>Este diagnóstico é executado quando a chave de ignição está na posição ON e quando o dispositivo de modulação por largura de pulso está sendo energizado ou desenergizado. Em alguns casos, o diagnóstico também é executado em alguns intervalos fixos.</p>
+          <h4>Condies para Execuo do Diagnstico</h4>
+            <p>Este diagnstico  executado quando a chave de ignio est na posio ON e quando o dispositivo de modulao por largura de pulso est sendo energizado ou desenergizado. Em alguns casos, o diagnstico tambm  executado em alguns intervalos fixos.</p>
           
-          <h4>Condições para Configurar os Códigos de Falha</h4>
-            <p>O sinal de PWM do circuito de controle do ventilador <b>não</b> é detectado com um valor igual ao da voltagem do sistema quando o sinal de PWM é ligado.</p>
+          <h4>Condies para Configurar os Cdigos de Falha</h4>
+            <p>O sinal de PWM do circuito de controle do ventilador <b>no</b>  detectado com um valor igual ao da voltagem do sistema quando o sinal de PWM  ligado.</p>
           
-          <h4>Ação tomada quando o código de falha está ativo</h4>
-            <ul><li>O ECM acende a luz amarela de verificação do motor (CHECK ENGINE) imediatamente quando o diagnóstico é executado e falha.</li>
-            <li>O ventilador <b>não</b> será habilitado.</li></ul>
+          <h4>Ao tomada quando o cdigo de falha est ativo</h4>
+            <ul><li>O ECM acende a luz amarela de verificao do motor (CHECK ENGINE) imediatamente quando o diagnstico  executado e falha.</li>
+            <li>O ventilador <b>no</b> ser habilitado.</li></ul>
           
-          <h4>Condições para Apagar o Código de Falha</h4>
-            <ul><li>Para validar o reparo, dê partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
-<li>O ECM apaga a luz âmbar de verificação do motor (CHECK ENGINE) e o código de falha é imediatamente desativado quando o diagnóstico é executado com êxito.</li>
-<li>Este código de falha também pode ser apagado com a ferramenta eletrônica de serviço INSITE™.</li></ul>
+          <h4>Condies para Apagar o Cdigo de Falha</h4>
+            <ul><li>Para validar o reparo, d partida no motor e deixe-o funcionar em marcha lenta durante 1 minuto.</li>
+<li>O ECM apaga a luz mbar de verificao do motor (CHECK ENGINE) e o cdigo de falha  imediatamente desativado quando o diagnstico  executado com xito.</li>
+<li>Este cdigo de falha tambm pode ser apagado com a ferramenta eletrnica de servio INSITE.</li></ul>
           
         </p>
         <h4>Dicas para a Oficina</h4>
-<p>A lógica de controle do ventilador pode ser ajustada com a ferramenta eletrônica de serviço INSITE™. Existem duas opções: 12 VCC ou 24 VCC LIGADO, ou 0 VCC LIGADO. Para a operação correta do ventilador, a lógica de controle do ventilador configurada com o INSITE™ <b>deve</b> ser compatível com a configuração dos equipamentos do veículo.</p>
-<p>Este código de falha é registrado quando o ECM envia um comando de 12 VCC ou de 24 VCC ao solenóide de controle do ventilador, mas a voltagem do circuito de controle do ventilador é menor que 12 VCC ou 24 VCC. A voltagem baixa no circuito do sinal geralmente indica um curto-circuito com o massa no chicote ou no solenóide.</p>
+<p>A lgica de controle do ventilador pode ser ajustada com a ferramenta eletrnica de servio INSITE. Existem duas opes: 12 VCC ou 24 VCC LIGADO, ou 0 VCC LIGADO. Para a operao correta do ventilador, a lgica de controle do ventilador configurada com o INSITE <b>deve</b> ser compatvel com a configurao dos equipamentos do veculo.</p>
+<p>Este cdigo de falha  registrado quando o ECM envia um comando de 12 VCC ou de 24 VCC ao solenide de controle do ventilador, mas a voltagem do circuito de controle do ventilador  menor que 12 VCC ou 24 VCC. A voltagem baixa no circuito do sinal geralmente indica um curto-circuito com o massa no chicote ou no solenide.</p>
       
-<a name="troubleshooting"></a><a href="../procedures/00-t05-245.htm">Consulte o diagnóstico do Código de Falha 245.</a>
+<a name="troubleshooting"></a><a href="../procedures/00-t05-245.htm">Consulte o diagnstico do Cdigo de Falha 245.</a>
     
   
 </p>
-<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">Última Modificação:  03-FEVEREIRO-2010</div>
+<div style="margin-top:10px; padding-left:10px; margin-bottom:15px; font-weight:bold; border-top-style:solid; border-top-color:#000000; border-top-width:2px; border-bottom-style:solid; border-bottom-color:#000000; border-bottom-width:2px; padding-top:5px; padding-bottom:5px;">ltima Modificao:03-FEVEREIRO-2010</div>
 <div style="margin-top:10px; margin-bottom:15px; padding-left:10px; font-weight:bold; text-align:left; font-size:13px;">
-<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a> © 2000-2009  Cummins Inc.  Todos os direitos reservados.</div>
+<div style="margin-top:10px; font-size:11px; font-weight:normal;"><a href="/qs2/qsol/terms.html?header=false">Copyright</a>2000-2009Cummins Inc.Todos os direitos reservados.</div>
 </div>
 </body>
 </html>
