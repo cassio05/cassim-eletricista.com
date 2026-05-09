@@ -63,7 +63,7 @@ else{
 	while(odbc_fetch_row($query)){
 		$cod=odbc_result($query, "cod");
 		$descricao=odbc_result($query, "descricao");
-		echo '<tr><td><b>Conector<br/><span style="font-size:10px;">(descrição)</span></b></td><td><a href="volksbus-18.330 OT/html/de/'.strtolower($cod).'.htm">'.$cod.'</a>&nbsp;&nbsp;'.$descricao.'</td></tr>';
+		echo '<tr><td><b>Conector<br/><span style="font-size:10px;">(descrição)</span></b></td><td><a href="volksbus_18.330_ot/html/de/'.strtolower($cod).'.htm">'.$cod.'</a>&nbsp;&nbsp;'.$descricao.'</td></tr>';
 		echo '<tr><td colspan="2"><hr></td></tr>';
 	}
 	*/
@@ -81,7 +81,7 @@ else{
 				//retorna o nome do arquivo do diagrama em funcao do numero da pagina
 				$arquivoDiagrama=geraNomeDiagrama($pagDiagrama);
 				$titulo=odbc_result($queryDiagrama, "titulo");
-				echo '<tr><td><b>Conector </b></td><td><a href="volksbus-18.330 OT/html/de/'.strtolower($codConector).'.htm">'.$codConector.' - '.$descConector.'</a><b>&nbsp;em </b><a href="volksbus-18.330 OT/html/de/'.$arquivoDiagrama.'">'.$titulo.'</a><b>, pág. </b>'.$pagDiagrama.'</td></tr>';
+				echo '<tr><td><b>Conector </b></td><td><a href="volksbus_18.330_ot/html/de/'.strtolower($codconector).'.htm">'.$codConector.' - '.$descConector.'</a><b>&nbsp;em </b><a href="volksbus_18.330_ot/html/de/'.$arquivodiagrama.'">'.$titulo.'</a><b>, pág. </b>'.$pagDiagrama.'</td></tr>';
 				echo '<tr><td colspan="2"><hr></td></tr>';
 			}
 		}
@@ -96,7 +96,7 @@ else{
 		$componentes=odbc_result($query, "componentes");
 		//retorna o nome do arquivo do diagrama em funcao do numero da pagina
 		$arquivoDiagrama=geraNomeDiagrama($pag);
-		echo '<tr><td><b>Diagrama</b></td><td colspan="2"><a href="volksbus-18.330 OT/html/de/'.$arquivoDiagrama.'">'.$titulo.'</a> <b>pág.</b> '.$pag.'</td></tr>';
+		echo '<tr><td><b>Diagrama</b></td><td colspan="2"><a href="volksbus_18.330_ot/html/de/'.$arquivodiagrama.'">'.$titulo.'</a> <b>pág.</b> '.$pag.'</td></tr>';
 		echo '<tr><td></td><td>'.$componentes.'</td></tr>';
 		echo '<tr><td colspan="2"><hr></td></tr>';
 	}
