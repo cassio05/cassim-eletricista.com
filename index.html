@@ -1,324 +1,197 @@
-﻿<!DOCTYPE htmll PUBLIC "-//W3C//DTD XhtmlL 1.0 Transitional//EN" "http://www.w3.org/TR/xhtmll1/DTD/xhtmll1-transitional.dtd">
-<htmll xmlns="http://www.w3.org/1999/xhtmll">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT CASSIO - Literatura Técnica</title>
 
-<link rel="stylesheet" href="../styles/diretrizes.css">
-<title>Literatura Técnica cassim eletricista</title>
-<style type="text/css">
-<!--
-* {
-	margin: 0;
-	padding: 0;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: Arial, Helvetica, sans-serif;
-}
-body{
-	background-image: url(img/fundo-cont.jpg);
-	background-repeat: repeat;
-}
+    <style>
+        :root {
+            --bg: #020617;
+            --card: #0f172a;
+            --primary: #2563eb;
+            --primary2: #3b82f6;
+            --text: #f8fafc;
+            --text2: #94a3b8;
+            --shadow: 0 25px 50px rgba(0,0,0,.55);
+        }
 
-a {
-	color:#666;
-	}
-a:link{
-	text-decoration: none;
-	}
-a:visited{
-	text-decoration: none;
-	} 
-a:hover{
-	text-decoration: e9014b;
-	}
-a:active {
-	text-decoration: none;
-	}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            background: 
+                radial-gradient(circle at top left, #1d4ed8 0%, transparent 25%),
+                radial-gradient(circle at bottom right, #0f766e 0%, transparent 20%),
+                linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-#conteudo {
-	height: 553px;
-	width: 100%;
+        .login-box {
+            width: 100%;
+            max-width: 430px;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 42px;
+            position: relative;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
 
-}
-.topo {
-	height: 106px;
-	width: 101%;
-	background-image: url(img/bg.png);
-	background-repeat: repeat-x;
-	
-	
-}
+        .top { text-align: center; margin-bottom: 35px; }
 
-.logo{
-	width: 100%;
-	margin-top:15px;
-	width:137px;
-	float:right;
-	height: 75px;
-	margin-right: 30px;
-}
+        .logo {
+            width: 74px; height: 74px; margin: auto auto 18px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; color: white; font-weight: bold;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+        }
 
-.logo1{
-	width: 100%;
-	margin-top:15px;
-	width:137px;
-	float:right;
-	height: 75px;
-	margin-left: 80px;
-}
+        .status {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 14px; border-radius: 999px;
+            background: rgba(34, 197, 94, 0.12);
+            color: #4ade80; font-size: .78rem; font-weight: 700;
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            margin-bottom: 20px;
+        }
 
-.logo2{
-	width: 100%;
-	margin-top: 5px;
-	width:137px;
-	float:right;
-	height: 75px;
-	margin-left: 180px;
-}
+        .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; }
 
-.vw {
-	float: left;
-	height: 51px;
-	width: 233px;
-	margin-left: 200px;
-	margin-top: 50px;
-}
-.man {
-	float: right;
-	height: 38px;
-	width: 233px;
-	margin-top: 60px;
-	margin-right: 200px;
-}
-.banner {
-	height:auto;
-	width: 900px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
+        h1 { color: var(--text); font-size: 2rem; margin-bottom: 10px; }
 
-.entrar {
-	height:auto;
-	width: 900px;
-	margin-right: auto;
-	margin-left: auto;
-}
+        .subtitle { color: var(--text2); font-size: .95rem; line-height: 1.6; }
 
-.text{
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:36px;
-	color:#666;
-	font-weight: bold;
-	float: left;
-	margin-top: 25px;
-	display: block;
-	margin-left: 25px;
-}
+        .form-group { margin-bottom: 22px; }
 
-.mode{
-	width: 900px;
-	height:auto;
-	float: left;
-	margin-top: 30px;
-}
+        label { display: block; color: #cbd5e1; font-size: .82rem; margin-bottom: 10px; font-weight: 700; }
 
-.frame1{
-	width: 900px;
-	height:auto;
-	float: left;
-	margin-top: 30px;
-}
+        .input {
+            width: 100%; height: 54px; background: #0b1220;
+            border: 1px solid #1e293b; border-radius: 14px;
+            padding: 0 18px; color: white; font-size: 1rem; transition: .25s;
+        }
 
-.euro{
-	width:350px;
-	float: left;
-	margin-left: 25px;
-}
-.tgx{
-	width:350px;
-	float: right;
-	margin-right: 25px;
-	
-}
-.text1{
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:24px;
-	color:#666;
-	font-weight: bold;
-	float: left;
-	width: 250px;
-	display:block;
-}
+        .input:focus { outline: none; border-color: #3b82f6; background: #0f172a; }
 
-.text2{
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:18px;
-	color:#FFF;
-	float: left;
-	width: 300px;
-}
+        .btn {
+            width: 100%; height: 56px; border: none; border-radius: 14px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: white; font-size: 1rem; font-weight: 700;
+            cursor: pointer; transition: .25s; margin-top: 8px;
+        }
 
-.imagem{
-	float: left;
-	margin-top: 20px;
-	width:350px;
-}
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35); }
 
-.seta{
-	float:right;
-	width:23px;
-	height:23px;
-	margin-right: 10px;
-	/*background-image:url(img/seta.jpg);*/
-}
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.seta a{
-	float:right;
-	width:23px;
-	height:23px;
-	margin-right: 10px;
-	background-image:url(img/seta.jpg);
-			}
-.seta a:hover{
-	background-image:url(img/seta-h.jpg);
-			}
+        .footer {
+            margin-top: 32px; padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center; color: #64748b; font-size: .78rem;
+        }
 
-#logo {
-	width: 100%;
-	margin-top:20px;
-	width:233px;
-	float:right;
-	height: 51px;
-	margin-right: 80px;
-	
-}
-
-#logo1 {
-	width: 100%;
-	margin-top:35px;
-	width:283px;
-	float:left;
-	height: 51px;
-	margin-left: 80px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:24px;
-	
-	
-}
-
-#logo2 {
-	width: 100%;
-	margin-top: 5px;
-	width:283px;
-	float:left;
-	height: 51px;
-	margin-left: 10px;
-	
-	
-}
-
-#apDiv1 {
-	position:absolute;
-	left:43px;
-	top:1px;
-	width:454px;
-	height:52px;
-	z-index:1;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 36px;
-}
-#conteudo .topo #logo1 p {
-	color: #FFF;
-	font-weight: bold;
-}
-
-
-
-
--->
-</style>
+        .secure { margin-top: 14px; font-size: .75rem; color: #475569; }
+    </style>
 </head>
-
 <body>
 
-<div id="conteudo">
-		<div class="topo">
-        <table class="topo" border="0"><tr>
-          <td width="26%"><div class="logo1" id="logo1">
-          <p>CÓDIGOS DE FALHAS</p><font size="2" color="ffffff"></font>
-</div></td><td width="49%"><img src="img/logo_2.png" alt="" /></td><td width="26%"><img src="img/logovw.png" alt="" /></td></tr></table>
-        
-        
-        
-        
-        
-
-<div class="logo2" id="logo2">
-          <p>&nbsp;</p>
-</div>
-		  <div id="logo"></div>
-  </div>
-		<div class="banner">
-        	<img src="img/banner.jpg" width="755">
-</div>
-  <div class="entrar">
-    <div class="mode">
-      <div class="euro">
-        <div class="text1"><a href="caminhoes/caminhoes.html">Caminhões</a></div>
-        <div class="imagem"><a href="caminhoes/caminhoes.html"><img src="img/constellation1.png" alt="" width="300" align="left"
-                  onmouseover="this.src='img/constellation.png'"
-                  onmouseout="this.src='img/constellation1.png'"  
-                  /></a>  </div>
-				  
-				  
-      </div>
-	  
-	  
-	  
-      <div class="tgx">
-        <div class="text1"><a href="volksbus/volksbus.html">Ônibus</a></div>
-        <div class="imagem"><a href="volksbus/volksbus.html"><img src="img/onibus1.png" alt="" width="300" align="left" 
-                  onmouseover="this.src='img/onibus.png'"
-                  onmouseout="this.src='img/onibus1.png'"/>
-                  </a>
-			 </div>
-			 </div>
-     
-				  <div class="euro"><p>&nbsp;</p>
-        <div class="text1"><a href="diagrama_eletrico/menu.html">Diagrama Elétrico</a></div><p>&nbsp;</p>
-        <div class="imagem"><a href="diagrama_eletrico/menu.html"><img src="img/icon.png" alt="" width="300" align="left" 
-                  onmouseover="this.src='img/icon1.png'"
-                  onmouseout="this.src='img/icon.png'"/>
-                  </a>	  
+<div class="login-box">
+    <div class="top">
+        <div class="logo">CB</div>
+        <div class="status">
+            <div class="dot"></div>
+            LITERATURA TÉCNICA AUTOMOTIVA ONLINE
         </div>
-      </div>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+        <h1>CONNECT CASSIO</h1>
+        <div class="subtitle">
+            Plataforma de gerenciamento remoto<br>
+            Redes • Diagnóstico • Infraestrutura
+        </div>
+    </div>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="userInput">USUÁRIO</label>
+            <input type="text" id="userInput" class="input" placeholder="Digite seu usuário" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passInput">SENHA DE ACESSO</label>
+            <input type="password" id="passInput" class="input" placeholder="••••••••••" required>
+        </div>
+
+        <button class="btn" type="submit" id="btnAcessar">ACESSAR SISTEMA</button>
+    </form>
+
+    <div class="footer">
+        <span style="font-weight:700; color:#94a3b8;">TERMINAL BUILD 4.8.2 • ENTERPRISE</span><br>
+        Network & Fleet Management Platform<br>
+        © 2026 • Secure Infrastructure System
+        <div class="secure">Protected by Cloudflare Secure Gateway</div>
+    </div>
 </div>
-  </div>
-  <br />
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const btn = document.getElementById("btnAcessar");
+        const user = document.getElementById("userInput").value;
+        const pass = document.getElementById("passInput").value;
+
+        // Interface de carregamento
+        btn.innerHTML = "VALIDANDO CREDENCIAIS...";
+        btn.disabled = true;
+
+        try {
+            // URL do seu Worker no Cloudflare
+            const URL_WORKER = 'https://sever.cassim-eletricista.workers.dev/'; 
+
+            const response = await fetch(URL_WORKER, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user: user, pass: pass })
+            });
+
+            if (!response.ok) throw new Error("Erro no servidor");
+
+            const data = await response.json();
+
+            if (data.success) {
+                btn.innerHTML = "ACESSO AUTORIZADO";
+                btn.style.background = "linear-gradient(135deg, #22c55e, #16a34a)";
+                
+                setTimeout(() => {
+                    // Nome da sua página principal (ex: caminhoes.html)
+                    window.location.href = "acesso_literatura"; 
+                }, 1000);
+            } else {
+                alert("Usuário ou Senha incorretos.");
+                resetBtn(btn);
+            }
+
+        } catch (error) {
+            console.error("Erro:", error);
+            alert("Falha na comunicação com o servidor de segurança.");
+            resetBtn(btn);
+        }
+    });
+
+    function resetBtn(btn) {
+        btn.innerHTML = "ACESSAR SISTEMA";
+        btn.disabled = false;
+    }
+</script>
+
 </body>
-</htmll>
+</html>
