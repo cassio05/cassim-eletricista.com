@@ -8,267 +8,107 @@
 
 <script src="../script.js"></script>
 
-title>CÓDIGOS DE FALHAS</title>
+<title>CÓDIGOS DE FALHAS</title>
 
 <style>
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:url(../../img/fundo-cont.jpg);
-    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../../img/fundo-cont.jpg);
 }
 
 /* TOPO */
-
-.topo{
-    width:100%;
-    min-height:100px;
-    background:url(../../img/bg.png) repeat-x;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 20px;
-    gap:15px;
+.topo {
+    width: 100%;
+    height: 100px;
+    background: url(../../img/bg.png) repeat-x;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.logo-text{
-    color:#FFF;
-    font-size:32px;
-    font-weight:bold;
+.logo-text {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* MENU */
+.menu {
+    width: 100%;
+    background: #333;
+    padding: 10px;
 
-.menu{
-    width:100%;
-    background:#333;
-    padding:12px 20px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
 }
 
-.menu a{
-    color:#FFF;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
+.menu a {
+    color: #FFF;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.menu a:hover{
-    color:yellow;
+.menu a:hover {
+    color: yellow;
 }
-
-/* CONTEUDO */
 
 #conteudo{
-    width:100%;
-    max-width:1600px;
-    margin:auto;
-    padding:30px;
+	width: 91%;
+	margin-right: 105px;
+	margin-left: 105px;
+	height: 900px;
+	margin-top: 100px;
 }
 
 /* TITULOS */
-
-.title{
-    font-size:42px;
-    color:red;
-    font-weight:bold;
-    text-align:center;
-    margin-bottom:40px;
+.title {
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
 }
 
-.sub{
-    font-size:22px;
-    font-weight:bold;
-    margin-bottom:40px;
-    text-align:center;
+.sub {
+    margin: 100px 0 100px;
+    font-weight: bold;
+	
 }
 
-/* LINHAS DOS CODIGOS */
-
-.diag{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:10px;
-    margin-bottom:10px;
+/* QUADROS (CORRIGIDO) */
+.diag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-bottom: 2px;
 }
 
-/* QUADRADOS */
-
-.limite{
-    border:4px solid #0000FF;
-    background:#FFF;
-    padding:8px;
-    min-height:170px;
-
-    display:flex;
-    flex-direction:column;
-
-    transition:0.2s;
+.limite {
+    width: 170px;
+    height: 170px;
+    border: 5px solid #0000FF;
+  padding: 0px 0px;
+   background: #fff;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	margin-left: 1px;
 }
 
-.limite:hover{
-    transform:scale(1.02);
+.cod a {
+    color: #0000FF;
+    font-weight: bold;
+	 font-size: 20px;
 }
 
-/* CODIGO */
-
-.cod{
-    margin-bottom:8px;
+.text {
+    font-size: 18px;
+    margin-top: 5px;
+	color: #1C1C1C;
 }
-
-.cod a{
-    color:#0000FF;
-    font-weight:bold;
-    font-size:22px;
-    text-decoration:underline;
-}
-
-/* TEXTO */
-
-.text{
-    font-size:17px;
-    color:#222;
-    line-height:1.3;
-}
-
-/* IMAGENS */
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-/* TABLE */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-/* RESPONSIVO TABLET */
-
-@media(max-width:1024px){
-
-    #conteudo{
-        padding:20px;
-    }
-
-    .diag{
-        grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-    }
-
-    .title{
-        font-size:34px;
-    }
-
-}
-
-/* RESPONSIVO CELULAR */
-
-@media(max-width:768px){
-
-    body{
-        background-size:cover;
-    }
-
-    .topo{
-        flex-direction:column;
-        justify-content:center;
-        text-align:center;
-        padding:15px;
-    }
-
-    .logo-text{
-        font-size:24px;
-    }
-
-    .topo img{
-        max-height:50px;
-        width:auto;
-    }
-
-    .menu{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .menu a{
-        font-size:16px;
-    }
-
-    #conteudo{
-        padding:12px;
-        margin-top:10px;
-    }
-
-    .title{
-        font-size:28px;
-        margin-bottom:25px;
-    }
-
-    .sub{
-        font-size:18px;
-        margin-bottom:25px;
-    }
-
-    .diag{
-        grid-template-columns:repeat(2,1fr);
-        gap:8px;
-    }
-
-    .limite{
-        min-height:150px;
-        padding:6px;
-        border-width:3px;
-    }
-
-    .cod a{
-        font-size:18px;
-    }
-
-    .text{
-        font-size:14px;
-        line-height:1.2;
-    }
-
-}
-
-/* CELULAR PEQUENO */
-
-@media(max-width:480px){
-
-    .diag{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .limite{
-        min-height:140px;
-    }
-
-    .cod a{
-        font-size:16px;
-    }
-
-    .text{
-        font-size:13px;
-    }
-
-    .title{
-        font-size:24px;
-    }
-
-}
-
-</style>
 
 </style>
 
@@ -292,7 +132,7 @@ table{
 <!-- CONTEÚDO -->
 
 
-<d
+<div id="conteudo">
 
 <div id="conteudo">
 		<div class="title">Módulo EDC7 - Euro V</div>
@@ -304,7 +144,7 @@ table{
                         <div class="text"></div>
 				</div>
                 <div class="limite">
-                		<div class="cod"><a href="../../intros/intro_b___edc7/intro_b_edc.html" target="_top">Intro B</a></div>
+                		<div class="cod"><a href="../../intros/intro_b_edc7/intro_b_edc.html" target="_top">Intro B</a></div>
                         <div class="text"></div>
 				</div>
                 <div class="limite">
@@ -315,7 +155,7 @@ table{
    		
         <div class="diag"><!--INICIO DIAG-->
         		<div class="limite">
-                		<div class="cod"><a href="0094_01.html" target="_top">0094/01</a></div>
+                		<div class="cod"><a href="0094_01.html_" target="_top">0094/01</a></div>
                         <div class="text">Pressão de alimentação de combustível</div>
 				</div>
                 <div class="limite">
