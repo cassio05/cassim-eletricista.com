@@ -3,31 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
-    
-    
-	
-	
-	<title>1880/02</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	
-	<script src="js/jquery_1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery.corner.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".box-four").corner();
-			$('<div class="tr"></div><div class="tl"></div><div class="br"></div><div class="bl"></div>').appendTo(".box-five");
-		});	
-	</script>
-<style type="text/css">
-#apDiv1 {
-	position:absolute;
-	left:10px;
-	top:1869px;
-	width:1013px;
-	height:165px;
-	z-index:1;
-}
+<script>
+
+(async () => {
+
+    const token = sessionStorage.getItem("token");
+
+    // sem token = bloqueia
+    if (!token) {
+
+        location.replace("../../index.html");
+        return;
+
+    }
+
+    try {
+
+        const r = await fetch("https://sever.cassim-eletricista.workers.dev/", {
+            method: "GET",
+            headers: {
+                "Authorization": token
+            }
+        });
+
+        // erro servidor
+        if (!r.ok) {
+
+            sessionStorage.removeItem("token");
+
+            location.replace("../../index.html");
+            return;
+
+        }
+
+        const d = await r.json();
+
+        // token inválido
+        if (d.valido !== true) {
+
+            sessionStorage.removeItem("token");
+
+            location.replace("../../index.html");
+            return;
+
+        }
+
+        console.log("Autenticado");
+
+    } catch (e) {
+
+        console.log(e);
+
+        sessionStorage.removeItem("token");
+
+        location.replace("../../index.html");
+
+    }
+
+})();
+
+</script>
 <!--
 a:link {
 	color: #0033FF;

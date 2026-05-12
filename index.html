@@ -142,55 +142,103 @@
 </div>
 
 <script>
-    document.getElementById("loginForm").addEventListener("submit", async function(e) {
-        e.preventDefault();
 
-        const btn = document.getElementById("btnAcessar");
-        const user = document.getElementById("userInput").value;
-        const pass = document.getElementById("passInput").value;
+document.getElementById("loginForm")
+.addEventListener("submit", async function(e) {
 
-        // Interface de carregamento
-        btn.innerHTML = "VALIDANDO CREDENCIAIS...";
-        btn.disabled = true;
+    e.preventDefault();
 
-        try {
-            // URL do seu Worker no Cloudflare
-            const URL_WORKER = 'https://sever.cassim-eletricista.workers.dev/'; 
+    const btn =
+    document.getElementById("btnAcessar");
 
-            const response = await fetch(URL_WORKER, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ user: user, pass: pass })
-            });
+    const user =
+    document.getElementById("userInput").value;
 
-            if (!response.ok) throw new Error("Erro no servidor");
+    const pass =
+    document.getElementById("passInput").value;
 
-            const data = await response.json();
+    btn.innerHTML =
+    "VALIDANDO CREDENCIAIS...";
 
-            if (data.success) {
-                btn.innerHTML = "ACESSO AUTORIZADO";
-                btn.style.background = "linear-gradient(135deg, #22c55e, #16a34a)";
-                
-                setTimeout(() => {
-                    // Nome da sua página principal (ex: caminhoes.html)
-                    window.location.href = "acesso_literatura"; 
-                }, 1000);
-            } else {
-                alert("Usuário ou Senha incorretos.");
-                resetBtn(btn);
-            }
+    btn.disabled = true;
 
-        } catch (error) {
-            console.error("Erro:", error);
-            alert("Falha na comunicação com o servidor de segurança.");
-            resetBtn(btn);
+    try {
+
+        const URL_WORKER =
+        "https://sever.cassim-eletricista.workers.dev/";
+
+        const response = await fetch(URL_WORKER, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                user: user,
+                pass: pass
+            })
+
+        });
+
+        if (!response.ok) {
+            throw new Error("Erro no servidor");
         }
-    });
 
-    function resetBtn(btn) {
-        btn.innerHTML = "ACESSAR SISTEMA";
-        btn.disabled = false;
+        const data = await response.json();
+
+        if (data.success) {
+
+            // salva token
+            sessionStorage.setItem(
+                "token",
+                data.token
+            );
+
+            btn.innerHTML =
+            "ACESSO AUTORIZADO";
+
+            btn.style.background =
+            "linear-gradient(135deg,#22c55e,#16a34a)";
+
+            setTimeout(() => {
+
+                window.location.href =
+                "acesso_literatura.html";
+
+            }, 1000);
+
+        } else {
+
+            alert("Usuário ou Senha incorretos");
+
+            resetBtn(btn);
+
+        }
+
+    } catch(error) {
+
+        console.error(error);
+
+        alert(
+        "Falha na comunicação com servidor");
+
+        resetBtn(btn);
+
     }
+
+});
+
+function resetBtn(btn) {
+
+    btn.innerHTML =
+    "ACESSAR SISTEMA";
+
+    btn.disabled = false;
+
+}
+
 </script>
 
 </body>

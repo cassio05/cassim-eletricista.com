@@ -2,108 +2,294 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+<script>
 
+(async () => {
+
+    const token = sessionStorage.getItem("token");
+
+    // sem token = bloqueia
+    if (!token) {
+
+        location.replace("../../index.html");
+        return;
+
+    }
+
+    try {
+
+        const r = await fetch("https://sever.cassim-eletricista.workers.dev/", {
+            method: "GET",
+            headers: {
+                "Authorization": token
+            }
+        });
+
+        // erro servidor
+        if (!r.ok) {
+
+            sessionStorage.removeItem("token");
+
+            location.replace("../../index.html");
+            return;
+
+        }
+
+        const d = await r.json();
+
+        // token inválido
+        if (d.valido !== true) {
+
+            sessionStorage.removeItem("token");
+
+            location.replace("../../index.html");
+            return;
+
+        }
+
+        console.log("Autenticado");
+
+    } catch (e) {
+
+        console.log(e);
+
+        sessionStorage.removeItem("token");
+
+        location.replace("../../index.html");
+
+    }
+
+})();
+
+</script>
 
 <script src="../js/script.js"></script>
 
 <title>CÓDIGOS DE FALHAS</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: url(../../img/fundo-cont.jpg);
+    background:url(../../img/fundo-cont.jpg);
+    background-size:cover;
+    background-attachment:fixed;
 }
 
 /* TOPO */
-.topo {
-    width: 100%;
-    height: 100px;
-    background: url(../../img/bg.png) repeat-x;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+
+.topo{
+    width:100%;
+    min-height:90px;
+    background:url(../../img/bg.png) repeat-x;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px 20px;
+    flex-wrap:wrap;
 }
 
-.logo-text {
-    color: #FFF;
-    font-size: 28px;
-    font-weight: bold;
+.logo-text{
+    color:#FFF;
+    font-size:34px;
+    font-weight:bold;
+    text-shadow:2px 2px 4px #000;
 }
 
 /* MENU */
-.menu {
-    width: 100%;
-    background: #333;
-    padding: 10px;
+
+.menu{
+    width:100%;
+    background:#1a1a1a;
+    padding:14px 20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    border-bottom:4px solid #0000FF;
 }
 
-.menu a {
-    color: #FFF;
-    margin-right: 20px;
-    text-decoration: none;
-    font-weight: bold;
+.menu a{
+    color:#FFF;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.2s;
 }
 
-.menu a:hover {
-    color: yellow;
+.menu a:hover{
+    color:yellow;
 }
+
+/* CONTEÚDO */
 
 #conteudo{
-	width: 900px;
-	margin-right: auto;
-	margin-left: auto;
-	height: 500px;
-	margin-top: 15px;
+    width:100%;
+    max-width:1900px;
+    margin:auto;
+    padding:20px;
 }
 
 /* TITULOS */
-.title {
-    font-size: 20px;
-    color: red;
-    font-weight: bold;
+
+.title{
+    font-size:42px;
+    color:red;
+    font-weight:bold;
+    margin-bottom:15px;
+    text-shadow:1px 1px 2px #000;
 }
 
-.sub {
-    margin: 50px 0 50px;
-    font-weight: bold;
+.sub{
+    font-size:26px;
+    font-weight:bold;
+    color:#111;
+    margin-bottom:35px;
 }
 
-/* QUADROS (CORRIGIDO) */
-.diag {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    margin-bottom: 2px;
+/* LINHAS */
+
+.diag{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:14px;
+    margin-bottom:14px;
 }
 
-.limite {
-    width: 140px;
-    border: 4px solid #000000;
-    padding: 15px;
-    min-height: 120px;
-    background: #fff;
-	margin-right: 2px;
-	margin-bottom: 2px;
-	
+/* QUADRADOS */
+
+.limite{
+    background:#FFF;
+    border:5px solid #0000FF;
+    border-radius:10px;
+    padding:15px;
+    min-height:220px;
+
+    display:flex;
+    flex-direction:column;
+
+    transition:0.2s;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
 }
 
-.cod a {
-    color: #06F;
-    font-weight: bold;
+.limite:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-.text {
-    font-size: 12px;
-    margin-top: 5px;
+/* CODIGO */
+
+.cod{
+    margin-bottom:10px;
 }
 
+.cod a{
+    color:#0000FF;
+    font-weight:bold;
+    font-size:28px;
+    text-decoration:none;
+}
+
+.cod a:hover{
+    color:red;
+}
+
+/* TEXTO */
+
+.text{
+    font-size:22px;
+    line-height:1.4;
+    color:#1C1C1C;
+    word-break:break-word;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    .title{
+        font-size:34px;
+    }
+
+    .sub{
+        font-size:22px;
+    }
+
+    .cod a{
+        font-size:24px;
+    }
+
+    .text{
+        font-size:20px;
+    }
+
+}
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+    .topo{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topo img{
+        height:45px;
+    }
+
+    .logo-text{
+        width:100%;
+        font-size:26px;
+    }
+
+    .menu{
+        justify-content:center;
+    }
+
+    .menu a{
+        font-size:16px;
+    }
+
+    #conteudo{
+        padding:10px;
+    }
+
+    .title{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .sub{
+        font-size:20px;
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    .diag{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .limite{
+        min-height:auto;
+        padding:12px;
+    }
+
+    .cod a{
+        font-size:22px;
+    }
+
+    .text{
+        font-size:18px;
+    }
+
+}
 </style>
 
 </head>
