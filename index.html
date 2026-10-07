@@ -142,103 +142,75 @@
 </div>
 
 <script>
-
-document.getElementById("loginForm")
-.addEventListener("submit", async function(e) {
-
-    e.preventDefault();
-
-    const btn =
-    document.getElementById("btnAcessar");
-
-    const user =
-    document.getElementById("userInput").value;
-
-    const pass =
-    document.getElementById("passInput").value;
-
-    btn.innerHTML =
-    "VALIDANDO CREDENCIAIS...";
-
-    btn.disabled = true;
-
-    try {
-
-        const URL_WORKER =
-        "https://senhagithub.cassim-eletricista.workers.dev/";
-
-        const response = await fetch(URL_WORKER, {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                user: user,
-                pass: pass
-            })
-
-        });
-
-        if (!response.ok) {
-            throw new Error("Erro no servidor");
-        }
-
-        const data = await response.json();
-
-        if (data.success) {
-
-            // salva token
-            sessionStorage.setItem(
-                "token",
-                data.token
-            );
-
-            btn.innerHTML =
-            "ACESSO AUTORIZADO";
-
-            btn.style.background =
-            "linear-gradient(135deg,#22c55e,#16a34a)";
-
-            setTimeout(() => {
-
-                window.location.href =
-                "acesso_literatura.html";
-
-            }, 1000);
-
-        } else {
-
-            alert("Usuário ou Senha incorretos");
-
-            resetBtn(btn);
-
-        }
-
-    } catch(error) {
-
-        console.error(error);
-
-        alert(
-        "Falha na comunicação com servidor");
-
-        resetBtn(btn);
-
+document.addEventListener("DOMContentLoaded", () => {
+    const loginForm = document.getElementById("loginForm");
+    
+    if (!loginForm) {
+        console.error("[CONNECT CASSIO] Elemento #loginForm não foi encontrado na página.");
+        return;
     }
 
+    loginForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const btn = document.getElementById("btnAcessar");
+        const user = document.getElementById("userInput") ? document.getElementById("userInput").value.trim() : "";
+        const pass = document.getElementById("passInput") ? document.getElementById("passInput").value.trim() : "";
+
+        if (!user || !pass) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        btn.innerHTML = "VALIDANDO CREDENCIAIS...";
+        btn.disabled = true;
+
+        try {
+            const URL_WORKER = "https://senhagithub.cassim-eletricista.workers.dev/";
+
+            const response = await fetch(URL_WORKER, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ user, pass })
+            });
+
+            if (!response.ok) {
+                throw new Error(`Servidor respondeu com status HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Salva token no sessionStorage
+                sessionStorage.setItem("token", data.token);
+
+                btn.innerHTML = "ACESSO AUTORIZADO";
+                btn.style.background = "linear-gradient(135deg,#22c55e,#16a34a)";
+
+                setTimeout(() => {
+                    window.location.href = "acesso_literatura.html";
+                }, 1000);
+
+            } else {
+                alert(data.message || "Usuário ou Senha incorretos");
+                resetBtn(btn);
+            }
+
+        } catch (error) {
+            console.error("[CONNECT CASSIO] Detalhes da falha:", error);
+            alert("Falha na comunicação com servidor. Pressione F12 para verificar os logs de rede.");
+            resetBtn(btn);
+        }
+    });
 });
 
 function resetBtn(btn) {
-
-    btn.innerHTML =
-    "ACESSAR SISTEMA";
-
+    if (!btn) return;
+    btn.innerHTML = "ACESSAR SISTEMA";
     btn.disabled = false;
-
 }
-
 </script>
 
 </body>
