@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
 
 (async () => {
@@ -19,7 +20,7 @@
 
     try {
 
-        const r = await fetch("https://sever.cassim-eletricista.workers.dev/", {
+        const r = await fetch("https://senhagithub.cassim-eletricista.workers.dev/", {
             method: "GET",
             headers: {
                 "Authorization": token
@@ -63,36 +64,70 @@
 })();
 
 </script>
-<title>ESQUEMAS ELETRICO</title>
 
-<div class="header-container" style="width: 100%; text-align: center;">
-    <img src="../imagem/fundo.png" alt="Cabeçalho MAN VW Esquemas Elétricos" style="max-width: 100%; height: auto;"><div class="linha"></div>
-</div>
+<title>ESQUEMAS ELÉTRICOS</title>
 
 <style>
-body {
-    margin: 0;
-    background: #fff;
+
+*{
+    box-sizing: border-box;
 }
 
-.page {
-    width: 100%;
+body{
+    margin:0;
+    padding:0;
+    background:#fff;
+    overflow-x:hidden;
+    font-family:Arial, sans-serif;
 }
 
-.page img {
-    max-width: 900px;
-    width: 100vw;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-/* linha entre páginas */  
-.linha {  
-    height: 12px;  
-    background: yellow;  
-    margin: px 0;  
+/* cabeçalho */
+.header-container{
+    width:100%;
+    text-align:center;
 }
 
+.header-container img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* páginas */
+.page{
+    width:100%;
+    text-align:center;
+}
+
+.page img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+
+/* linha amarela */
+.linha{
+    height:12px;
+    background:yellow;
+    width:100%;
+    margin:0;
+}
+
+/* celular */
+@media screen and (max-width:768px){
+
+    .linha{
+        height:8px;
+    }
+
+    body{
+        font-size:15px;
+    }
+
+}
 </style>
 </head>
 <body>

@@ -20,15 +20,16 @@ div#page-wrap		{
 }
 
 .box-three			{
-	width: 460px;
-	background: #cfffff;
-	border: 1px solid #33ccff;
-	-moz-border-radius: 12px;
-	margin-top: 10px;
-	margin-right: 0;
-	margin-bottom: 10px;
-	margin-left: 0;
-	color:#303c49;
+width: 460px;
+background: #cfffff;
+border: 1px solid #33ccff;
+-moz-border-radius: 12px;
+border-radius: 12px;
+margin-top: 10px;
+margin-right: 0;
+margin-bottom: 10px;
+margin-left: 0;
+color:#303c49;
 }
 .box-three .inside	{ padding: 20px; }
 
@@ -80,23 +81,25 @@ div#page-wrap		{
 }
 .texto			{
 	font-family: Arial, Helvetica, sans-serif;
-	-moz-border-radius: 12px;
-	margin-top: 10px;
-	margin-right: 0;
-	margin-bottom: 10px;
-	margin-left: 0;
-	color:#303c49;
+-moz-border-radius: 12px;
+border-radius: 12px;
+margin-top: 10px;
+margin-right: 0;
+margin-bottom: 10px;
+margin-left: 0;
+color:#303c49;
 }
 
 .titletexto			{
 	font-family: Arial, Helvetica, sans-serif;
-	-moz-border-radius: 12px;
-	margin-top: 10px;
-	margin-right: 0;
-	margin-bottom: 10px;
-	margin-left: 0;
-	color:#303c49;
-	font-weight: bold;
+-moz-border-radius: 12px;
+border-radius: 12px;
+margin-top: 10px;
+margin-right: 0;
+margin-bottom: 10px;
+margin-left: 0;
+color:#303c49;
+font-weight: bold;
 }
 
 .codigo {
@@ -108,4 +111,4 @@ div#page-wrap		{
 	margin-right:10px;
 	color:#303c49;
 	font-weight: bold;
-	
+}

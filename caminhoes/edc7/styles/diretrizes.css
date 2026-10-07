@@ -1,351 +1,328 @@
-/* =========================================================
-   DIRETRIZES.CSS RESPONSIVO MODERNO
-   ========================================================= */
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E DE RESPONSIVIDADE
+   ========================================================================== */
+BODY {
+    FONT-SIZE: 20px; 
+    COLOR: #333333; 
+    FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    PADDING: 0px; 
+    MARGIN: 0px;
+    BACKGROUND-COLOR: #ffffff;
+    overflow-x: hidden; /* Evita qualquer barra de rolagem horizontal indesejada */
+}
 
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
+/* Imagens técnicas e diagramas adaptáveis */
+IMG, table img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Ícones de alertas específicos dentro do texto mantêm o tamanho correto */
+p.texto2 img, p.texto img {
+    max-width: unset !important;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+DIV {
+    FONT-SIZE: 18px; 
+    COLOR: #333333; 
+    FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    PADDING: 0px; 
+    MARGIN: 0px;
+}
+
+/* Tabelas fluidas para telas de smartphones e PCs */
+TABLE {
+    FONT-SIZE: 19px; 
+    COLOR: #333333; 
+    FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box;
 }
 
-/* HTML / BODY */
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #333333;
-    background-color: #000;
+TD {
+    FONT-SIZE: 19px;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    padding: 6px;
 }
 
-/* BODY */
-body {
-    padding: 0;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+SELECT, INPUT, LABEL {
+    FONT-SIZE: 18px; 
+    COLOR: #333333; 
+    FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
-/* LINKS */
-a {
-    color: #0033FF;
-    text-decoration: none;
+A {
+    COLOR: #000066; 
+    TEXT-DECORATION: none;
 }
 
-a:hover {
-    color: #FF0000;
-}
-
-a:visited {
-    color: #0033FF;
-}
-
-a:active {
-    color: #0033FF;
-}
-
-/* TEXTO */
-p {
-    margin: 10px 0;
-}
-
-/* DIV */
-div {
-    position: relative;
-}
-
-/* IMAGENS */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border: 0;
-}
-
-/* TABELAS */
-table {
-    width: 100%;
-    max-width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-td,
-th {
-    padding: 8px;
-    vertical-align: top;
-    word-break: break-word;
-}
-
-/* RESPONSIVO PARA TABELAS */
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-}
-
-/* CLASSES ORIGINAIS */
-.style5 {
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.style7 {
-    font-size: 28px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+/* ==========================================================================
+   FAIXAS AMARELAS PADRONIZADAS (IGUAIS DE PONTA A PONTA)
+   ========================================================================== */
 .style8 {
-    font-weight: bold;
-    background-color: #FFED00;
+    font-weight: bold !important;
+    background-color: #FFED00 !important;
+    color: #000000 !important;
+    display: block !important;
+    
+    /* Expansão matemática para cobrir 100% da tela de lado a lado */
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    
+    /* Padronização absoluta de tamanho e altura de linha */
+    box-sizing: border-box !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding: 12px 20px !important; /* Altura idêntica para todas */
+    line-height: 1.4 !important;
+    font-size: 21px !important;
+    text-align: left !important;
+    clear: both !important;
+}
+
+/* Remove quebras ou espaçamentos que o HTML antigo possa herdar de tabelas */
+td .style8 {
+    margin-left: calc(-50vw + 50%) !important;
+}
+
+/* ==========================================================================
+   CLASSES DE TEXTO E TABELAS TÉCNICAS
+   ========================================================================== */
+.texto {
     padding: 10px 20px;
-    font-size: 14px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 26px;
 }
 
-.style10 {
-    font-size: 14px;
-}
-
-.style11 {
-    font-size: 18px;
-}
-
-.style13 {
-    font-size: 12px;
-}
-
-.style14 {
-    font-size: 28px;
-}
-
-.style15 {
-    color: #0000FF;
-    font-weight: bold;
-}
-
-.style16 {
-    color: #0033FF;
-    font-weight: bold;
-}
-
-/* TEXTOS */
-.texto,
-.texto1,
 .texto2 {
     text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* NOTAS */
-.nota {
-    font-weight: bold;
-    background-color: #FFFFCC;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* TABELAS */
-.tabela,
-.tabela2 {
-    text-align: center;
+    padding: 8px 20px;
+    line-height: 1.5;
+	font-size: 26px;
 }
 
 .tabela1 {
     padding-left: 10px;
 }
 
-/* CONTAINERS */
-.container {
+.tabela2 {
+    text-align: center;
+}
+
+DIV.section {
+    MARGIN: 13px 0px;
+}
+DIV.section DIV.section {
+    MARGIN-TOP: 0px;
+}
+.sh1 {
+    FONT-SIZE: 100%; MARGIN-BOTTOM: 0px;
+}
+DIV.section P.first-child {
+    MARGIN-TOP: 0px;
+}
+.line {
+    MARGIN: 0px;
+}
+H1 {
+    DISPLAY: none;
+}
+P, H1, H2, H3, H4 {
+    PADDING: 0px; 
+    MARGIN: 8px 0px;
+}
+H3, H4 {
+    FONT-SIZE: 100%;
+}
+P.note {
+    FONT-SIZE: 10px; 
+    COLOR: #333333;
+}
+LABEL {
+    FONT-SIZE: 10px; 
+    LINE-HEIGHT: 12px;
+}
+
+.min-width {
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 850px;
+    margin: 0 auto;
+    BACKGROUND-COLOR: #cccccc;
 }
 
-/* BLOCO PRINCIPAL */
-.main-content {
+#header {
     width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    background: #ffffff;
+    HEIGHT: auto;
+    min-height: 90px;
+    BACKGROUND-COLOR: #cccccc;
 }
 
-/* SCROLL HORIZONTAL */
-.scroll-x {
-    overflow-x: auto;
+#content-main {
+    MARGIN-LEFT: 0px;
 }
 
-/* BLOCO AMARELO */
-.box-yellow {
-    background: #FFED00;
-    padding: 10px;
-    font-weight: bold;
+#content-right {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* IMAGENS ESPECIAIS */
-.img-icon {
-    width: 15px;
-    display: inline-block;
-    vertical-align: middle;
+/* Classes utilitárias do rodapé técnico */
+.text1 {
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 9pt;
+    font-weight : bold;
+    color : #000000;
 }
 
-.img-medium {
-    width: 300px;
+.text1White {
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 9pt;
+    font-weight : bold;
+    color : White;
 }
 
-.img-large {
-    width: 700px;
+.textmenunegrito {
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 10pt;
+    color : #909090;
+    font-weight : bold;
 }
 
-/* BLOCKQUOTE */
-blockquote {
-    margin-left: 20px;
-    margin-right: 20px;
+.boxsemborder2, .boxsemborder2_R {
+    border : 1px #000000 solid;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 8pt;
+    color : #000000;
 }
 
-/* HR */
-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 15px 0;
+.boxsemborder2_R {
+    text-align : right;
 }
 
-/* INPUTS */
-input,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 14px;
-    padding: 8px;
-    max-width: 100%;
+.text2, .text3 {
+    font-size : 9pt;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    color : #403A87;
 }
 
-/* BOTÕES */
-button {
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
+.text2red, .text3red {
+    font-size : 9pt;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    color : Red;
 }
 
-/* RESPONSIVO */
-@media screen and (max-width: 768px) {
-
-    html,
-    body {
-        font-size: 13px;
-    }
-
-    .style5 {
-        font-size: 20px;
-    }
-
-    .style7 {
-        font-size: 22px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .style11 {
-        font-size: 16px;
-    }
-
-    .style14 {
-        font-size: 24px;
-    }
-
-    .texto,
-    .texto1,
-    .texto2,
-    .nota,
-    .style8 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    td,
-    th {
-        font-size: 13px;
-        padding: 6px;
-    }
-
-    img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-    }
-
-    iframe,
-    video {
-        width: 100%;
-        height: auto;
-    }
-
-    blockquote {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
+.text3black {
+    font-size : 9pt;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
 }
 
-/* CELULARES PEQUENOS */
-@media screen and (max-width: 480px) {
-
-    .style5 {
-        font-size: 18px;
-    }
-
-    .style7 {
-        font-size: 18px;
-    }
-
-    .style11 {
-        font-size: 14px;
-    }
-
-    .style14 {
-        font-size: 20px;
-    }
-
-    td,
-    th {
-        font-size: 12px;
-    }
-
-    p {
-        font-size: 13px;
-    }
-
+.text4red {
+    font-size : 11pt;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    color : red;
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #999;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #eee;
-}
-
-/* remove largura fixa */
-td,
-th {
-    width: auto !important;
+/* ==========================================================================
+   IMAGENS GERAIS (DIAGRAMAS GRANDES)
+   ========================================================================== */
+img {
     max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 10px auto;
 }
+
+/* ==========================================================================
+   EXCEÇÃO: ÍCONES NO MEIO DO TEXTO (img_005, img_003, atencao, etc.)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   IMAGENS TÉCNICAS E DIAGRAMAS (Ficam responsivos)
+   ========================================================================== */
+img:not([src*="atencao"]):not([src*="setatopo"]):not([src*="pixel"]):not([src*="img_005"]) {
+    max-width: 100% !important;      /* Não deixa a imagem passar do limite do ecrã */
+    height: auto !important;
+    display: block;                  /* Evita textos desalinhados por baixo de esquemas grandes */
+    margin: 15px auto !important;    /* Centraliza os diagramas na página */
+}
+/* ==========================================================================
+   CORREÇÃO E PADRONIZAÇÃO DOS ÍCONES DE ALERTA NO TEXTO
+   ========================================================================== */
+/* ==========================================================================
+   IMAGENS RESPONSIVAS (DIAGRAMAS GRANDES)
+   ========================================================================== */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 15px auto;
+}
+
+/* ==========================================================================
+   EXCEÇÃO: APENAS ÍCONES E IMAGENS DO MEIO DO TEXTO (FICA PEQUENO)
+   ========================================================================== */
+/* Filtra cirurgicamente apenas os arquivos reais de ícones de aviso e painel */
+img[src*="img_003"],
+img[src*="img_005"],
+img[src*="atencao"], 
+img[src*="setatopo"], 
+img[src*="pixel"] {
+    width: auto !important;           /* Cancela o esticamento forçado */
+    max-width: unset !important;      /* Remove o limite de bloco responsivo */
+    height: 14px !important;          /* Força a altura exata para alinhar com a linha */
+    display: inline-block !important; /* Obriga a ficar lado a lado com as palavras */
+    vertical-align: middle !important;/* Centraliza verticalmente com o texto */
+    margin: 0 4px !important;         /* Dá um pequeno espaçamento nas laterais */
+}
+
+/* ==========================================================================
+   OTIMIZAÇÃO AUTOMÁTICA PARA TELEFONES (ECRÃS ATÉ 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* Ajusta suavemente o tamanho das letras para não sobrecarregar o ecrã do telemóvel */
+    BODY, .texto, .texto2 {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Ajusta o tamanho do título na faixa amarela para caber bem sem quebras exageradas */
+    .style8 {
+        font-size: 16px !important;
+        padding: 12px 15px !important;
+        margin-top: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Reduz proporcionalmente a altura dos ícones de erro para combinar com a letra no telemóvel */
+    p.texto2 img, p.texto img, .style8 img {
+        height: 18px !important;
+        margin-left: 4px !important;
+        margin-right: 4px !important;
+    }
+
+    /* Melhora o espaçamento das tabelas técnicas e dados de pinagens no ecrã tátil */
+    TD {
+        padding: 6px !important;
+        font-size: 13px !important;
+    }
+    
+    TABLE {
+        font-size: 13px !important;
+    }
+
+    /* Remove recuos desnecessários do HTML antigo para aproveitar cada milímetro do ecrã */
+    blockquote {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding: 0px !important;
+    }
+}
+

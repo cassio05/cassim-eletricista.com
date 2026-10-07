@@ -42,11 +42,15 @@ ul#menu li a {
 }                     
 
 ul#menu li.parent > a {
-	background: transparent url('file:///C|/Users/GLOBAL/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/img/down.gif') right center no-repeat;
+	content: "▲";
+	float: right;
+	font-size: 10px;
 }                   
 
 ul#menu li.aberto > a {
-	background: transparent url('file:///C|/Users/GLOBAL/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/img/up.gif') right center no-repeat;
+	content: "▼";
+	float: right;
+	font-size: 10px;
 }                   
 
 ul#menu li a:hover {   
